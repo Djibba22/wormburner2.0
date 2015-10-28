@@ -1,0 +1,24 @@
+{
+  "name": "wormBurnerApp",
+  "version": "0.0.0",
+  "authors": [
+    "John Dinsmore <djibba22@fullsail.edu>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-route": "~1.4.7",
+    "angularfire": "~1.1.3"
+  }
+}
