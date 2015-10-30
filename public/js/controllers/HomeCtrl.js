@@ -1,5 +1,4 @@
-angular.module('myapp')
-.controller('HomeCtrl', ['$scope' , '$http', "$firebaseArray",function ($scope,$http,$firebaseArray) {
+app.controller('HomeCtrl', ['$scope' , '$http', '$firebaseArray',function ($scope,$http,$firebaseArray) {
 	
 		var ref= new Firebase("https://wormburnerapp.firebaseio.com/");
 		$scope.artists = $firebaseArray(ref);

@@ -1,0 +1,14 @@
+/*general styles*/
+button, html, input, select, textarea {
+    font-family: Roboto,'Helvetica Neue',sans-serif;
+}
+/*navbar styles*/
+.brand{
+	width: 100px;
+}
+
+@media screen and (min-width: 768px)
+.container .jumbotron, .container-fluid .jumbotron {
+    padding-right: 60px;
+    padding-left: 60px;
+}
