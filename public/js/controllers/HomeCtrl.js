@@ -18,4 +18,5 @@ app.controller('HomeCtrl', ['$scope' , '$http', '$firebaseArray',function ($scop
 
 			});
 		}
+		
 }]);

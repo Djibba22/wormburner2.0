@@ -1,14 +1,90 @@
 /*general styles*/
-button, html, input, select, textarea {
+body{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-image:url("../img/golf.jpg");
+	background-repeat:no-repeat;
+    background-position:50% 25%;
+}
+button, html,h1, input, select, textarea {
     font-family: Roboto,'Helvetica Neue',sans-serif;
+    color: #7A9E35;
+}
+footer{
+	padding-top: 19px;
+	color:#777;
+	border-top: 1px solid #e5e5e5;
+}
+
+.header,
+.marketing,
+.footer{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.container.header{
+	
+}
+.header{
+	color: white;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+h1.wormbanner{
+	color: #7A9E35;
 }
 /*navbar styles*/
 .brand{
 	width: 100px;
 }
-
-@media screen and (min-width: 768px)
-.container .jumbotron, .container-fluid .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
+.jumbotron.signup{
+	background-color: #2A4C6F;
+	color: white;
+	width: 70%;
+	margin:auto;
+	box-shadow: 10px 10px 5px #888888;
 }
+/*signup page styling*/
+form.signup{
+	width: 70%;
+	margin:auto;
+}
+button.facelog{
+	background-color: #4D6C8C;
+	color: white;	
+}
+.already{
+	margin-top: 50px;
+}
+/*customize container*/
+@media screen(min-width: 768px){
+	.container{
+		max-width: 730px;
+	}
+}
+.container-narrow > hr{
+	margin-bottom: 30px 0;
+}
+.jumbotron{
+	text-align: center;
+}
+.jumbotron .btn{
+	font-size: 21px;
+	padding: 14px 24px;
+}
+@media screen and (min-width: 768px){
+	.header,
+	.marketing,
+	.footer {
+    padding-right: 0px;
+    padding-left: 0px;
+ }
+ .header{
+ 	margin-bottom: 30px;
+ }
+ .jumbotron{
+ 	border-bottom: 0;
+ }
+}
+
+

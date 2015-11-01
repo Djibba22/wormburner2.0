@@ -1,0 +1,45 @@
+
+<form name="commentForm" ng-submit="postComment()">
+	<label for="">Author
+		<input class="input-group" ng-model="newComment.author" value="" type="text"autofocus>
+	</label>
+	<label for="">New Comment
+		<textarea ng-model="newComment.body" class="input-group" cols="30" rows="10" value="" type="text"autofocus></textarea> 
+	</label>
+	<button type="submit">Submit</button>
+</form>
+
+<form>
+	<label for="">
+		<input class="input-group" ng-model="search.text" type="text" name="" id="" autofocus>
+	</label>
+	<label for="">
+		<select name="" id="" ng-model="search.group">
+			<option value="name">Name</option>
+			<option value="reknown">Reknown</option>
+		</select>
+	</label>
+	<label for="descending">
+		<input type='radio' ng-model="direction" name="direction" id="ascending" checked>Descending	
+	</label>
+	<label for="acending">
+		<input type='radio' ng-model="direction" name="direction" id="ascending" value="reverse" checked>Asscending	
+	</label>
+</form>
+
+<ul class="list-group">
+	<li ng-repeat="artist in artists | filter:search.text| orderBy:search.group:direction">
+		
+
+		<div class="col-md-12">
+		<h4>{{artist.author}}</h4>
+		 <p class="list-group-item-text">
+		 	{{artist.$id}}
+		 	{{artist.body | limitTo:140}}
+		 	{{artist.body.length > 140 ? '...':''}}
+		 </p>	
+			<md-button class="md-raised" ng-click="artists.$remove(artist)">Remove</button>
+		</div>
+	</li>
+
+</ul>

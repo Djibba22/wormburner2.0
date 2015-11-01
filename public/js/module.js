@@ -1,1 +1,4 @@
-var app = angular.module('myapp',['ngRoute','firebase']);
+var app = angular.module('wormburnerApp',[
+	'ngRoute',
+	'firebase',
+	]);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app='myapp'>
+<html lang="en" ng-app='wormburnerApp'>
 <head>
 <base href="/"></base>
 	<title>WormBurner2.0</title>
@@ -11,21 +11,29 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
 </head>
 <body>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img class="brand" alt="Brand" src="/img/Green-icon.png">
-      </a>
-    </div>
-      <button type="button" href="/views/signin.html" class="btn btn-default navbar-btn pull-right">Sign in</button>
-  </div>
-</nav>
+ <div class="container header">
+    <div class="header">
+	    <ul class="nav nav-pills pull-right">
+	      <li><a type="" data-ng-href="/" class="">Home</a></li>
+	      <li><a type="" data-ng-href="/login" class="">Log In</a></li>
+	      <li><a type="" data-ng-href="/register" class=" ">Register</a></li>
+	      <li><a type="" data-ng-href="/chat" class="">Chat</a></li>
+	      <li><a type="" data-ng-href="/chat" class="">Logout</a></li>
+	    </ul>
+	    <h3 class="text-muted">Wormburner</h3>
+   </div>
+ </div>
+
+
 		
 	<!--  bring in the other views -->
-	<div class="container">
-		<div ng-view></div>
-	</div>
+	<div class="container main" ng-view=""></div>
+	
+	<footer>
+		<div class="row">
+			<p class="text-center">Copyright 2015 Wormburner Golf</p>
+		</div>
+	</footer>
 	<!-- jquery -->
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -43,5 +51,9 @@
     <script src="js/module.js"></script>
     <script src="js/routes.js"></script>
     <script src="js/controllers/HomeCtrl.js"></script>
+    <script src="js/controllers/RegisterCtrl.js"></script>
+    <script src="js/controllers/LoginCtrl.js"></script>
+    <script src="js/controllers/ChatCtrl.js"></script>
+    <script src="js/controllers/FBCtrl.js"></script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<div class="row" class="center">
+  <div class="col-sm-12 col-md-12"></div>
+	<h1 class="text-center wormbanner">- Wormburner -</h1>
+	<h2 class="text-center lead">Golf Awaits</h2>
+</div>
+<div class="container" ng-controller="RegisterCtrl">
+  <p ng-if="message">Message: <strong>{{ message }}</strong></p>
+  <p ng-if="error">Error: <strong>{{ error }}</strong></p>
+   
+  <div  class="jumbotron signup">
+     <h2>Register</h2>
+    	<form class="signup">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input ng-model="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input ng-model="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+         <div class="form-group">
+          <label for="exampleInputPassword1">Confirm Password</label>
+          <input  ng-model="confirmpassword" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+     	  <button ng-click="createUser()" class="btn btn-success">Register</button>
+          <br><br>
+        <button ng-click="removeUser()" class="btn btn-danger">Remove User</button>
+        </form>
+    <div class="row">
+    <hr>
+        <p class="text-center">- OR -</p>
+        <div ng-controller="FBCtrl">
+        <div ng-hide="authData">
+        <form>
+            <button ng-click="auth.$authWithOAuthPopup('facebook')" class="btn btn-default facelog center-block">Login With Facebook</button>
+        </form>
+        </div>
+        <div ng-show="authData">
+          <img src="{{authData.facebook.profileImageURL}}">
+          <p>Hello, {{ authData.facebook.displayName }}</p>
+
+          <button ng-click="auth.$unauth()" class="btn btn-danger facelog center-block">Logout</button>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+  <div class="row bottom">
+      <p class="text-center already">Already a member? <a href="/signin">Sign in Here</a></p>
+  </div>
+</div>
