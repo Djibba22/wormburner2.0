@@ -1,8 +1,30 @@
-<div class="jumbotron">
-		<h2>Wormburner App</h2>
-		<p>
-			<a class="btn btn-primary" data-ng-href="/login">Login</a>
-			<a class="btn btn-success" data-ng-href="/register">Register</a>
-		</p>
-
+<div class="" ng-controller="HomeCtrl">
+	<button class="btn btn-success" ng-click="getLocation()">Find Courses near you</button>
+	<p id="demo"></p>
+	<div id="mapholder"></div>
 </div>
+<div class="row" class="center">
+  <div class="col-sm-12 col-md-12"></div>
+	<h1 class="text-center wormbanner">- Wormburner -</h1>
+	<h2 class="text-center lead">Golf Awaits</h2>
+</div>
+
+<h2>Featured Courses</h2>
+<div id="" ng-controller="CourseCtrl">
+<table class="table table-hover table-condensed">
+	<tr ng-repeat="courses in courseData | limitTo : 3">
+  		<td> <img src="{{courses.imgsubcourse_image}}"></td>
+  		<td>{{courses["coursename_link/_text"]}} </td> 
+  		<td>{{courses.description}} </td>  
+  		<td><a class="btn btn-success" href="{courses.bookateetime_link}}">Book a tee time</a> </td>  
+	</tr>
+	</table>
+	<p>There are <b>{{results}}</b> results for courses in your area</p>
+</div>
+ <div>
+ 	<p>
+	  <a class="btn btn-primary" data-ng-href="/login">Login</a>
+	  <a class="btn btn-success" data-ng-href="/register">Register</a>
+	</p>
+ </div>
+

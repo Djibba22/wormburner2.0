@@ -9,18 +9,16 @@
 	<link rel="stylesheet" type="text/css" href="/css/wormstyles.css">
 	<link rel="stylesheet" type="text/css" href="/bower/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 <body>
  <div class="container header">
     <div class="header">
 	    <ul class="nav nav-pills pull-right">
-	      <li><a type="" data-ng-href="/" class="">Home</a></li>
-	      <li><a type="" data-ng-href="/login" class="">Log In</a></li>
-	      <li><a type="" data-ng-href="/register" class=" ">Register</a></li>
-	      <li><a type="" data-ng-href="/chat" class="">Chat</a></li>
-	      <li><a type="" data-ng-href="/chat" class="">Logout</a></li>
+	      <li><a type="" data-ng-href="/login" class="indnav">Log In</a></li>
+	      <li><a type="" data-ng-href="/register" class="indnav reg">Register</a></li>   
 	    </ul>
-	    <h3 class="text-muted">Wormburner</h3>
+	    <h3 class="text-muted"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span><a href="/">Wormburner</a></h3>    
    </div>
  </div>
 
@@ -55,5 +53,7 @@
     <script src="js/controllers/LoginCtrl.js"></script>
     <script src="js/controllers/ChatCtrl.js"></script>
     <script src="js/controllers/FBCtrl.js"></script>
+    <script src="js/controllers/CourseCtrl.js"></script>
+    <script src="js/controllers/YelpCtrl.js"></script>
 </body>
 </html>
