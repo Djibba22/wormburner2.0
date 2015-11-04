@@ -2,7 +2,7 @@ app.controller('HomeCtrl', ['$scope' , '$http', '$firebaseArray',function ($scop
 	
 		var ref= new Firebase("https://wormburnerapp.firebaseio.com/");
 		$scope.artists = $firebaseArray(ref);
-		
+		// this is where the user can create a new comment
 		$scope.postComment = function (){
 			$scope.artists.$add({
 				author: $scope.newComment.author,
