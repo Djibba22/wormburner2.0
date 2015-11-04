@@ -1,0 +1,28 @@
+@font-face{ 
+	font-family: 'NexaRustSlab-BlackShadow01-Free-webfont';
+	src: url('./webfonts/NexaRustSlab-BlackShadow01-Free-webfont.eot');
+	src: url('./webfonts/NexaRustSlab-BlackShadow01-Free-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('./webfonts/NexaRustSlab-BlackShadow01-Free-webfont.woff') format('woff'),
+	     url('./webfonts/NexaRustSlab-BlackShadow01-Free-webfont.ttf') format('truetype'),
+	     url('./webfonts/NexaRustSlab-BlackShadow01-Free-webfont.svg#webfont') format('svg');
+}
+@font-face{ 
+	font-family: 'NexaRustExtras-Free-webfont';
+	src: url('./webfonts/NexaRustExtras-Free-webfont.eot');
+	src: url('./webfonts/NexaRustExtras-Free-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('./webfonts/NexaRustExtras-Free-webfont.woff') format('woff'),
+	     url('./webfonts/NexaRustExtras-Free-webfont.ttf') format('truetype'),
+	     url('./webfonts/NexaRustExtras-Free-webfont.svg#webfont') format('svg');
+}
+@font-face {
+    font-family: 'nexa_rust_script_l0regular';
+    src: url('./webfonts/NexaRustScriptL-0-Free-webfont.eot');
+    src: url('./webfonts/NexaRustScriptL-0-Free-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./webfonts/NexaRustScriptL-0-Free-webfont.woff2') format('woff2'),
+         url('./webfonts/NexaRustScriptL-0-Free-webfont.woff') format('woff'),
+         url('./webfonts/NexaRustScriptL-0-Free-webfont.ttf') format('truetype'),
+         url('./webfonts/NexaRustScriptL-0-Free-webfont.svg#nexa_rust_script_l0regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

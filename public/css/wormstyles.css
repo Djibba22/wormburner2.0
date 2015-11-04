@@ -42,9 +42,19 @@ a.indnav.reg{
 	border-radius: 0px; 
 }
 
-h1.wormbanner{
-	font-family: 'Lobster', cursive;
+h1.text-center.wormbanner{
+	font-family: 'NexaRustSlab-BlackShadow01-Free-webfont'; 
 	color: #7A9E35;
+}
+h1.extras{
+	font-family: 'NexaRustExtras-Free-webfont';
+	font-size: 200px;
+	color:white;
+	margin-top: 0px;
+	color: #7A9E35;
+}
+.lead{
+	font-family: 'nexa_rust_script_l0regular';
 }
 /*navbar styles*/
 .brand{
