@@ -1,5 +1,5 @@
 app.controller('LoginCtrl', ['$scope' , '$http', '$firebaseArray',function ($scope,$http,$firebaseArray){
-
+// this is firebase auth with password and email
 		$scope.login= function(){
 				var ref = new Firebase("https://wormburnerapp.firebaseio.com");
 			ref.authWithPassword({
