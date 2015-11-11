@@ -41,6 +41,16 @@ a.indnav.reg{
 	border: 1px solid;
 	border-radius: 0px; 
 }
+.home-logo{
+	margin-bottom: 100px;
+}
+.local{
+	height: 20px;
+	width:50%;
+}
+.bottom-buttons{
+	margin-top: 100px;
+}
 /* ########  custom web fonts ######## */
 h1.text-center.wormbanner{
 	font-family: 'NexaRustSlab-BlackShadow01-Free-webfont'; 
