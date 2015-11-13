@@ -1,24 +1,49 @@
 <div class="container container-table">
-<div class="" ng-controller="YelpCtrl">
-	
-</div>
-<div class="row" class="center">
-  <div class="text-center home-logo">	
-		<img src="/img/wormburnerlogo.png">
-	</div>
-</div>
-<div class="text-center">
-	<h2>Find local courses now!!</h2>
-	<a class="btn btn-success btn-lg btn-block" ng-click="getGolfDeals()">Local Courses</a>
-</div>	
-  <hr>	 
+	<div class="" ng-controller="YelpCtrl">
+		<div class="row" class="center">
+		  <div class="text-center home-logo">	
+				<img src="/img/wormburnerlogo.png">
+			</div>
+		</div>
+		<div class="text-center">
+			<h2 class="lead" >Find and Rate Courses on Yelp</h2>
+			<img class="yelpicon"  src="/img/yelp-icon.png">
+			<a class="btn btn-danger btn-lg btn-block" ng-click="getGolfDeals()">Find your Local Courses</a>
+		</div>	
+		  <hr>
+		  <div class="row">	 
+			<div class="data col-md-10-offset-1" data-ng-repeat="biz in golfdata">
+			 <div class="data-title row text-center">
+				<h2><a ng-href="{{biz.url}}">{{biz.name}}</a></h2>
+				 <div class="data-title row text-center">
+					<img class="yelptextlogo" src="/img/text-yelp-logo.png">
+					<h3>Rating <img src=" {{biz.rating_img_url}}"></h3>
+				 </div>
+				</div>
+				<div class="row">
+				<div class="col-md-2">
+					<img class="clubphoto" ng-src="{{biz.image_url}}">
+				</div>
+				<div class="address col-md-6">
+					<p><strong>Address:</strong>{{biz.location.display_address}}</p>
+					<p><strong>City:</strong> {{biz.location.city}}</p>
+					<p><strong>Phone:</strong> <a href="">{{biz.phone}}</a></p>
+				</div>
+				<div class="col-md-2">
+				 <a class="teetime btn btn-warning right" data-ng-href="/login">Get a tee Time</a>
+				 <a class="scorebtn btn btn-primary right" data-ng-href="/login">Score Card</a>
+				</div>
+				</div>
 
-
- <div class="bottom-buttons">
- 	<p>
-	  <a class="btn btn-primary right" data-ng-href="/login">Login</a>
-	  <a class="btn btn-success right" data-ng-href="/register">Register</a>
-	</p>
- </div>
+				<!-- <pre>{{biz | json}}</pre> -->
+			</div>
+		</div>
+		 <div class="bottom-buttons">
+		 	<p>
+			  <a class="btn btn-primary right" data-ng-href="/login">Login</a>
+			  <a class="btn btn-success right" data-ng-href="/register">Register</a>
+			</p>
+		 </div>
+	 </div>
  </div>
 

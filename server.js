@@ -7,9 +7,9 @@ app.use(express.static('public'))
 
 
 
-app.all('/*', function(req, res) {
+app.use('/*', function(req, res) {
     // Just send the index.html for other files to support HTML5Mode
-    res.sendFile('./public/index.html', { root: __dirname });
+    res.sendFile( __dirname +'./public/index.html');
 });
 
 var server = app.listen(process.env.PORT || 3000, function (){

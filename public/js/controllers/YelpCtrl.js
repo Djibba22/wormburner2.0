@@ -40,14 +40,22 @@ app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray',function ($scop
 	          oauth_timestamp:  new Date().getTime(),
 	          oauth_nonce: randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzA'),
 	          term: 'golf'
+	          // deals_filter: true
+
 	          
 	        },
 	        consumerSecret = 'b5tb39Cqft0Gromguo49PAmD79I',
 	        tokenSecret ='OsH_O_RxgJ-1NIQXviA5FaMMVqw',
 	        signature = oauthSignature.generate(method, url, params, consumerSecret, tokenSecret, {encodeSignature: false});
 	        params.oauth_signature = signature;
-	        $http.jsonp(url, {params: params}).then(function(callback){
-	        		console.log(callback);
+	        $http.jsonp(url, {params: params}).then(function(data){
+	        	$scope.golfdata = new Array();
+
+	 			angular.forEach(data.data.businesses, function(value,key){
+	 				//console.log(key,values);
+	 				$scope.golfdata.push(value);
+	 			})
+									
 	        },function(error){
 	        		console.log(error);
 	        });

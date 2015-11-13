@@ -14,8 +14,12 @@ app.config(function ($routeProvider,$locationProvider) {
 		controller: 'RegisterCtrl'
 	})
 	.when('/login', {
-        templateUrl: '/views/login.html',
+        templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
+      })
+	.when('/userdashboard', {
+        templateUrl: 'views/userdashboard.html',
+        controller: 'dashboardCtrl'
       })
     .otherwise( { 
     	redirectTo: '/'
