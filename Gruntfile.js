@@ -17,7 +17,7 @@ grunt.initConfig({
       options: {
         middleware: function (connect) {
                         return [
-                            modRewrite (['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg|\\.ttf|\\.woff|\\.woff2|\\.svg|\\.eot $ /index.html [L]']),
+                            modRewrite (['!\\.html|\\.js|\\.svg|\\.css|\\.png|\\.jpg|\\.ttf|\\.woff|\\.woff2|\\.svg|\\.eot$ /index.html [L]']),
                             mountFolder(connect, 'public')
                         ];
                     }

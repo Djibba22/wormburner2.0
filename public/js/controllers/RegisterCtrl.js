@@ -26,7 +26,7 @@ app.controller("RegisterCtrl", ["$scope", "Auth",
     $scope.removeUser = function() {
       $scope.message = null;
       $scope.error = null;
-
+// remove user function
       Auth.$removeUser({
         email: $scope.email,
         password: $scope.password
