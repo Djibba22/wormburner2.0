@@ -44,7 +44,7 @@
         <div ng-show="authData">
           <img src="{{authData.facebook.profileImageURL}}">
           <p>Hello, {{ authData.facebook.displayName }}</p>
-          <p>{{}}</p>
+          <p>{{userData.uid}}</p>
 
           <button ng-click="auth.$unauth()" class="btn btn-danger facelog center-block">Logout</button>
         </div>

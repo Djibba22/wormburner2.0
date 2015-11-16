@@ -7,7 +7,7 @@ app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray','Auth',function
 			  	$scope.userFavorites = $firebaseArray(ref);
 			  	console.log($scope.userFavorites);
 			    console.log("Logged in as:", authData.uid);
-			    console.log("Hello:", userData.userName);
+			   
 			  } else {
 			    console.log("Logged out");
 			  }
