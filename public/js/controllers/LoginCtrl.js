@@ -10,8 +10,8 @@ app.controller('LoginCtrl', ['$scope' , '$http', '$firebaseArray','$location', f
 			  	alert("Login Failed! Bad Combination");
 			    console.log("Login Failed!", error);
 			  } else {
-			  	// alert("Logged in as: ",authData);
-			    // console.log("Authenticated successfully with payload:", authData);
+			  	 alert("Logged in as: ", authData);
+			     console.log("Authenticated successfully with payload:", authData);
 			    $location.path('/userdashboard');
 			  }
 		});

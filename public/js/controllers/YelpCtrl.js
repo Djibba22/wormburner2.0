@@ -1,8 +1,33 @@
-app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray',function ($scope,$http,$firebaseArray) {
+app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray','Auth',function ($scope,$http,$firebaseArray,Auth) {
+	       $scope.auth = Auth;
+	       var ref;
+			 $scope.auth.$onAuth(function(authData) {
+			  if (authData) {
+			  	ref = new Firebase("https://wormburnerapp.firebaseio.com/users/"+ authData.uid+"/favorites/");
+			  	$scope.userFavorites = $firebaseArray(ref);
+			  	console.log($scope.userFavorites);
+			    console.log("Logged in as:", authData.uid);
+			    console.log("Hello:", userData.userName);
+			  } else {
+			    console.log("Logged out");
+			  }
+			})
+// sets the ability fo r user to add a course as a favorite to their profile
+		$scope.favorite = function(id){
+			console.log(ref);
+			ref.child(id).set({
+          		Liked: true
+          		// userName: $scope.userName
+        		})
 
+			// $scope.userFavorites.$add(id).then(function(ref) {
+			  
+			//   console.log("added record with id " + id);
+			//   $scope.userFavorites.$indexFor(id); // returns location in the array
+			// });
+		}
 
-		
-		   
+	   
 	    $scope.getGolfDeals = function() {
 
 	    	$http({

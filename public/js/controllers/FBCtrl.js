@@ -2,7 +2,7 @@
 
 app.factory("Auth", ["$firebaseAuth",
   function($firebaseAuth) {
-    var ref = new Firebase("https://wormburnerapp.firebaseio.com", "example3");
+    var ref = new Firebase("https://wormburnerapp.firebaseio.com");
     return $firebaseAuth(ref);
   }
 ]);

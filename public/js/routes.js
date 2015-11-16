@@ -19,7 +19,7 @@ app.config(function ($routeProvider,$locationProvider) {
       })
 	.when('/userdashboard', {
         templateUrl: 'views/userdashboard.html',
-        controller: 'dashboardCtrl'
+        controller: 'DashboardCtrl'
       })
     .otherwise( { 
     	redirectTo: '/'

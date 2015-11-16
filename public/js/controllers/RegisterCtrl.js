@@ -9,6 +9,7 @@ app.factory("Auth", ["$firebaseAuth",
 // and use it in our controller
 app.controller("RegisterCtrl", ["$scope", "Auth",
   function($scope, Auth) {
+    var ref = new Firebase("https://wormburnerapp.firebaseio.com/users/");
     $scope.createUser = function() {
       $scope.message = null;
       $scope.error = null;
@@ -17,7 +18,17 @@ app.controller("RegisterCtrl", ["$scope", "Auth",
         email: $scope.email,
         password: $scope.password
       }).then(function(userData) {
-        $scope.message = "User created with uid: " + userData.uid;
+      $scope.message = "User created with uid: " + userData.uid;
+      // console.log('string of something',ref);
+        ref.child(userData.uid).set({
+          uid: userData.uid,
+          email: $scope.email,
+          userName: $scope.userName
+        })
+        return Auth.$authWithPassword({
+          email: $scope.email,
+          password: $scope.password
+        })
       }).catch(function(error) {
         $scope.error = error;
       });
