@@ -3,5 +3,10 @@
 	<h1>User Dashboard</h1>
 	<h3>Welcome:</h3>
 	<h3>{{user.userName}}</h3>
-	<h3>Here is your collection of Courses</h3>
+	<h3>Here is your favorite Courses</h3>
+	<div class="" ng-controller="YelpCtrl">
+	<div data-ng-repeat="fav in favorites">
+	<pre>{{fav.userFavorites}}</pre>
+	</div>
+	</div>
 	
