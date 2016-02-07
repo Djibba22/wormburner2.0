@@ -17,17 +17,17 @@
     <div class="header">
 	    <ul class="nav nav-pills pull-right">
 	      <li><a type="" data-ng-href="/login" class="indnav">Log In</a></li>
-	      <li><a type="" data-ng-href="/register" class="indnav reg">Register</a></li>   
+	      <li><a type="" data-ng-href="/register" class="indnav reg">Register</a></li>
 	    </ul>
-	    <h3 class="text-muted"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span><a href="/">Wormburner.club</a></h3>    
+	    <a href="/"><img class="menulogo" src="/img/WormBurner_ChromeLogo.png"></a>
    </div>
  </div>
 
 
-		
+
 	<!--  bring in the other views -->
 	<div class="container main" ng-view=""></div>
-	
+
 	<footer>
 		<div class="row">
 			<p class="text-center">Copyright 2015</p>
@@ -42,10 +42,10 @@
     <script src="bower/angular-route/angular-route.js"></script>
     <script src="bower/firebase/firebase.js"></script>
     <script src="bower/angularfire/dist/angularfire.js"></script>
- 
+
    <!-- bootstrap dependencies -->
    <script src="bower/bootstrap/dist/js/bootstrap.js"></script>
-   <script src="bower/oauth-signature/dist/oauth-signature.js"></script> 
+   <script src="bower/oauth-signature/dist/oauth-signature.js"></script>
 
    <!-- usuals -->
     <script src="js/module.js"></script>
@@ -58,5 +58,6 @@
     <script src="js/controllers/CourseCtrl.js"></script>
     <script src="js/controllers/YelpCtrl.js"></script>
 	<script src="js/controllers/DashboardCtrl.js"></script>
+	<script src="js/controllers/HomeForecastCtrl.js"></script>
 </body>
 </html>

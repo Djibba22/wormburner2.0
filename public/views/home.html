@@ -1,17 +1,47 @@
 <div class="container container-table">
+	<!-- This is the weather container, eventually a lil widget -->
+	<div class="weather col-sm-4">
+	 <div class="widget-box" ng-controller="HomeForecastController as forecastCtrl">
+		 <div class="widget-header">
+			 <h4>
+				 <i class="icon-comments"></i> Weather in <span id="location">{{city}}</span>
+			 </h4>
+			 <span class="widget-toolbar">
+				 <a href="#" data-action="collapse"><i class="icon-chevron-up"></i></a>
+				 <a href="#" data-action="close"><i class="icon-remove"></i></a>
+			 </span>
+		 </div>
+		 <div class="widget-body">
+			 <div class="widget-main">
+				 <div><img id="weather_img" src="{{weather_icon_src}}"></div>
+				 <p>It is currently <span id="temperature">{{temperature}}</span>°F.Feels like <span>{{feelslike}}</span>°F with <span id="description">{{description}}</span></p>
+				 <p>Wind: <span id="wind_condition">{{wind_condition}}</span></p>
+			 </div>
+		 </div>
+	 </div>
+ </div>
+<!-- //## controller for the API ##\\ -->
 	<div class="" ng-controller="YelpCtrl">
 		<div class="row" class="center">
-		  <div class="text-center home-logo">	
-				<img src="/img/wormburnerlogo.png">
+<!-- //Logo is here for now -->
+<!-- //## ToDo"move the logo" ##\\ -->
+			<div id="rectt"></div>
+		  <div class="text-center home-logo">
+				<img class="WBlogo-index" src="/img/WormBurner_ChromeLogoText.jpg">
 			</div>
+			<div id="rectt"></div>
 		</div>
+<!-- //### Main heading will be replaced  with slogan ###\\\ -->
 		<div class="text-center">
 			<h2 class="lead" >Find and Rate Courses on Yelp</h2>
 			<img class="yelpicon"  src="/img/yelp-icon.png">
-			<a class="btn btn-danger btn-lg btn-block" ng-click="getGolfDeals()">Find your Local Courses</a>
-		</div>	
+<!-- //## clickable results implements the easy use large button##\\ -->
+			<a class="greeny btn btn-lg btn-block" ng-click="getGolfDeals()">Find your Local Courses</a>
+		</div>
 		  <hr>
-		  <div class="row">	 
+<!-- //## This is the results list for now it is just yelp ##\\ -->
+<!-- //## Todo get the google place API in here!! ##\\ -->
+		  <div class="row">
 			<div class="data col-md-10-offset-1" data-ng-repeat="biz in golfdata">
 			 <div class="data-title row text-center">
 			 <!-- <pre>{{biz| json}}</pre> -->
@@ -25,6 +55,7 @@
 				<div class="col-md-2">
 					<img class="clubphoto" ng-src="{{biz.image_url}}">
 				</div>
+		<!-- //## More basic list structure ##\\ -->
 				<div class="address col-md-6">
 					<p><strong>Address:</strong>{{biz.location.display_address}}</p>
 					<p><strong>City:</strong> {{biz.location.city}}</p>
@@ -47,4 +78,3 @@
 		 </div>
 	 </div>
  </div>
-

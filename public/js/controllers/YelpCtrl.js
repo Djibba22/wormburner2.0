@@ -7,12 +7,12 @@ app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray','Auth',function
 			  	$scope.userFavorites = $firebaseArray(ref);
 			  	console.log($scope.userFavorites);
 			    console.log("Logged in as:", authData.uid);
-			   
+
 			  } else {
 			    console.log("Logged out");
 			  }
 			})
-// sets the ability fo r user to add a course as a favorite to their profile
+// sets the ability for user to add a course as a favorite to their profile
 		$scope.favorite = function(id){
 			console.log(ref);
 			ref.child(id).set({
@@ -21,13 +21,13 @@ app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray','Auth',function
         		})
 
 			// $scope.userFavorites.$add(id).then(function(ref) {
-			  
+
 			//   console.log("added record with id " + id);
 			//   $scope.userFavorites.$indexFor(id); // returns location in the array
 			// });
 		}
 
-	   
+
 	    $scope.getGolfDeals = function() {
 
 	    	$http({
@@ -42,7 +42,7 @@ app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray','Auth',function
 			  }, function errorCallback(response) {
 			    console.log("no juice today");
 			  });
-	    	
+
 
 				// get a random string for oath nonce value
 					var randomString = function(length, chars) {
@@ -51,7 +51,7 @@ app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray','Auth',function
 										  return result;
 
 				}
-	    	         
+
 	      var getGolf = function(city,latlong) {
 	      	 var method = 'GET',
 	        url = 'https://api.yelp.com/v2/search/',
@@ -67,7 +67,7 @@ app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray','Auth',function
 	          term: 'golf'
 	          // deals_filter: true
 
-	          
+
 	        },
 	        consumerSecret = 'b5tb39Cqft0Gromguo49PAmD79I',
 	        tokenSecret ='OsH_O_RxgJ-1NIQXviA5FaMMVqw',
@@ -80,16 +80,12 @@ app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray','Auth',function
 	 				//console.log(key,values);
 	 				$scope.golfdata.push(value);
 	 			})
-									
+
 	        },function(error){
 	        		console.log(error);
 	        });
 	      }
-	       
-	   
+
+
 	  }
 }]);
-
-
-
-
