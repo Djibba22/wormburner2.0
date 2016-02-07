@@ -1,3 +1,4 @@
+// This pulls in from weather underground the data which I have on the home page soo far
   app.controller('HomeForecastController', function($scope, $http) {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
