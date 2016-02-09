@@ -1,0 +1,222 @@
+$gold:#948d33;
+$black:#FFF;
+
+
+/*######################  General #####################################  */
+/*###########################  Styles  #####################################  */
+body{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*background-image:url("../img/golf.jpg");*/
+	background-repeat:no-repeat;
+    background-position:50% 25%;
+    z-index: -1;
+}
+button, html,h1, input, select, textarea {
+    font-family: Roboto,'Helvetica Neue',sans-serif;
+    color: #7A9E35;
+}
+footer{
+	padding-top: 19px;
+	color:#777;
+	border-top: 1px solid #e5e5e5;
+}
+#rectt {
+	margin-top: 50px;
+	width: 100%;
+	height: 12px;
+	background: #000;
+}
+#rectb {
+	width: 100%;
+	height: 12px;
+	background: #000;
+}
+/*######################  Weather Widget #####################################  */
+/*###########################  Styles  #####################################  */
+
+
+
+
+
+
+
+/*######################  data card #####################################  */
+/*###########################  Styles  #####################################  */
+.greeny{
+	background-color: #948d33;
+	color:white;
+	border-radius: 0px;
+}
+.clubphoto{
+	box-shadow: 2px 2px 1px gray;
+	margin-left: 20%;
+	border-radius: 4%;
+}
+.data-title{
+
+	font-family: 'NexaRustSlab-BlackShadow01-Free-webfont';
+}
+.data{
+	box-shadow: 2px 2px 2px black;
+	padding: 1%;
+	border:2px solid #0680b1;
+	border-radius:6px;
+	margin-bottom: 10px;
+}
+.address{
+	margin-left: 10%;
+	color:#0680b1;
+}
+.teetime{
+
+}
+.scorebtn{
+	margin-top: 10px;
+}
+.yelpicon{
+	width:100px;
+}
+.yelptextlogo{
+	width:75px;
+
+}
+
+.header,
+.marketing,
+.footer{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/*######################  navigation #####################################  */
+/*###########################  Styles  #####################################  */
+.container.header{
+
+}
+.header{
+	color: white;
+}
+.indnav{
+	font-size: 15px;
+	color: #7A9E35;
+}
+a.indnav:hover{
+	color: white;
+	background-color: #7A9E35;
+}
+a.indnav.reg{
+	border-color: #7A9E35;
+	border: 1px solid;
+	border-radius: 0px;
+}
+.menulogo{
+	height: 50px;
+	width: 90px;
+}
+.home-logo{
+}
+.WBlogo-index{
+	height: 200px;
+	width: 250px;
+}
+.local{
+	height: 20px;
+	width:50%;
+}
+.bottom-buttons{
+	margin-top: 100px;
+}
+.lead{
+font-family: 'nexa_rust_script_l0regular';
+}
+/*######################  WebFont #####################################  */
+/*###########################  Styles  #####################################  */
+h1.text-center.wormbanner{
+	font-family: 'NexaRustSlab-BlackShadow01-Free-webfont';
+	color: #7A9E35;
+}
+h1.extras{
+	font-family: 'NexaRustExtras-Free-webfont';
+	font-size: 200px;
+	color:white;
+	margin-top: 0px;
+	color: #7A9E35;
+}
+.lead{
+	font-family: 'nexa_rust_script_l0regular';
+}
+/*######################  NavBar #####################################  */
+/*###########################  Styles  #####################################  */
+.brand{
+	width: 100px;
+}
+/*jumbotron styles*/
+.jumbotron{
+	width: 70%;
+	margin:auto;
+}
+.jumbotron.signup{
+	background-color: #2A4C6F;
+	color: white;
+	width: 70%;
+	margin:auto;
+	box-shadow: 10px 10px 5px #888888;
+}
+.jumbotron .btn{
+
+}
+.jumbotron.ng-scope{
+	background-color: rgba(25, 25, 25, .5);
+	text-align: center;
+}
+/*######################  Sign UP #####################################  */
+/*###########################  Styles  #####################################  */
+form.signup{
+	width: 70%;
+	margin:auto;
+}
+button.facelog{
+	background-color: #4D6C8C;
+	color: white;
+}
+.already{
+	margin-top: 50px;
+}
+/*######################  Score Card #####################################  */
+/*###########################  Styles  #####################################  */
+.card {
+  background-color: #948d33;
+  color: #fff;
+}
+
+.highlight {
+  background-color: #4D6C8C;
+  color: #fff;
+}
+
+/*######################  Customize #####################################  */
+/*###########################  Styles  #####################################  */
+@media screen and(min-width: 768px){
+	.container{
+		max-width: 730px;
+	}
+}
+.container-narrow > hr{
+	margin-bottom: 30px 0;
+}
+
+
+@media screen and(min-width: 768px){
+	.header,
+	.marketing,
+	.footer {
+    padding-right: 0px;
+    padding-left: 0px;
+ }
+ .header{
+ 	margin-bottom: 30px;
+ }
+ .jumbotron{
+ 	border-bottom: 0;
+ }
+}

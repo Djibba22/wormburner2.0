@@ -36,20 +36,32 @@ grunt.initConfig({
 				files: 'publicw/**/*.html'
 			}
 		},
+    sass: {
+			dist: {
+				files: {
+					'public/css/wormstyles.css' : 'public/css/sass/wormstyles.scss'
+				}
+			}
+		},
+		watch: {
+			css: {
+				files: '**/*.scss',
+				tasks: ['sass']
+			}
+		}
 
 });
 
 
  // startup task libraries
+ grunt.loadNpmTasks('grunt-contrib-sass');
  grunt.loadNpmTasks('grunt-contrib-connect');
  grunt.loadNpmTasks('grunt-contrib-watch');
  grunt.loadNpmTasks('grunt-contrib-connect');
 
 // task array
   grunt.registerTask('default', ['connect:server','watch']);
-  
+  grunt.registerTask('dev',['sass']);
+
 
 };
-
-
-
