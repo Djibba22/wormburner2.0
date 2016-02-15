@@ -24,6 +24,7 @@ app.config(function ($routeProvider,$locationProvider,uiGmapGoogleMapApiProvider
     .otherwise( {
     	redirectTo: '/'
     });
+		//Routes are all in place and working correctly
 		uiGmapGoogleMapApiProvider.configure({
 	        key: 'AIzaSyCbS6tJIroWAxSR9vNCwhyxerrkoN2i2Lw',
 	        v: '3.20', //defaults to latest 3.X anyhow
