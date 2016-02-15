@@ -1,5 +1,6 @@
 $gold:#948d33;
 $black:#FFF;
+$olivedrab:#5b9c01;
 
 
 /*######################  General #####################################  */
@@ -8,9 +9,10 @@ body{
 	padding-top: 20px;
 	padding-bottom: 20px;
 	/*background-image:url("../img/golf.jpg");*/
-	background-repeat:no-repeat;
-    background-position:50% 25%;
-    z-index: -1;
+  background-color: #5b9c01;
+	// background-repeat:no-repeat;
+    // background-position:50% 25%;
+    // z-index: -1;
 }
 button, html,h1, input, select, textarea {
     font-family: Roboto,'Helvetica Neue',sans-serif;
@@ -34,20 +36,24 @@ footer{
 }
 /*######################  Weather Widget #####################################  */
 /*###########################  Styles  #####################################  */
+#conditons,#temperature,#wind_condition{
+  font-weight: bold;
+  color: $gold;
+}
 
-
-
-
+/*######################  Map #####################################  */
+/*###########################  Styles  #####################################  */
+.angular-google-map-container { height: 400px; }
 
 
 
 /*######################  data card #####################################  */
 /*###########################  Styles  #####################################  */
-.greeny{
-	background-color: #948d33;
-	color:white;
-	border-radius: 0px;
-}
+// .greeny{
+// 	background-color: #948d33;
+// 	color:white;
+// 	border-radius: 0px;
+// }
 .clubphoto{
 	box-shadow: 2px 2px 1px gray;
 	margin-left: 20%;
@@ -198,7 +204,7 @@ button.facelog{
 /*###########################  Styles  #####################################  */
 @media screen and(min-width: 768px){
 	.container{
-		max-width: 730px;
+		max-width: 960px;
 	}
 }
 .container-narrow > hr{

@@ -1,11 +1,21 @@
 <div class="container container-table">
-	<!-- This is the weather container, eventually a lil widget -->
+ <div class="row x">
+ <!-- =======//Logo is here for now//======= -->
+ <!-- This is the start of the new branding,ToDo change the rest of the buttons and colors to move along with full rebranding -->
+
+ 			<!-- My new slick logo that I drew completely on my own -->
+ 		  <div class="text-center home-logo">
+ 				<img class="WBlogo-index" src="/img/WormBurner_ChromeLogoText.jpg">
+ 			</div>
+
+ 	</div>
+	<!--//##===== Weather Container  ====== -->
 <div class="row">
 	<div class="weather col-sm-4">
 	 <div class="widget-box" ng-controller="HomeForecastController as forecastCtrl">
 		 <div class="widget-header">
 			 <h4>
-				 <i class="icon-comments"></i> Weather in <span id="location">{{city}}</span>
+				 <i class="icon-comments"></i><span id="location">{{city}}</span>
 			 </h4>
 			 <span class="widget-toolbar">
 				 <a href="#" data-action="collapse"><i class="icon-chevron-up"></i></a>
@@ -15,25 +25,25 @@
 		 <div class="widget-body">
 			 <div class="widget-main">
 				 <div><img id="weather_img" src="{{weather_icon_src}}"></div>
-				 <p>It is currently <span id="temperature">{{temperature}}</span>°F.Feels like <span>{{feelslike}}</span>°F with <span id="description">{{description}}</span></p>
-				 <p>Wind: <span id="wind_condition">{{wind_condition}}</span></p>
+				 <p id="temperature"><span id="temperature">{{temperature}}</span>°F and <span id="description">{{description}}</span></p>
+				 <p id="wind_condition">Wind: <span id="wind_condition">{{wind_condition}}</span></p>
 			 </div>
 		 </div>
 	 </div>
  </div>
  </div>
+ <!-- Map Body Here -->
+ <div class="row">
+ 	<div id="map_canvas" ng-controller="MapCtrl">
+    <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+</div>
+
+ 	</div>
+ </div>
+
 <!-- //## controller for the Yelp API ##\\ -->
 	<div class="" ng-controller="YelpCtrl">
 		<div class="row" class="center">
-<!-- //Logo is here for now -->
-<!-- This is the start of the new branding,ToDo change the rest of the buttons and colors to move along with full rebranding -->
-			<div id="rectt"></div>
-			<!-- My new slick logo that I drew completely on my own -->
-		  <div class="text-center home-logo">
-				<img class="WBlogo-index" src="/img/WormBurner_ChromeLogoText.jpg">
-			</div>
-			<div id="rectt"></div>
-		</div>
 <!-- //### Main heading will be replaced  with slogan ###\\\ -->
 		<div class="text-center">
 			<h2 class="lead" >Find and Rate Courses on Yelp</h2>

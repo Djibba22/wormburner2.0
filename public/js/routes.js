@@ -1,4 +1,4 @@
-app.config(function ($routeProvider,$locationProvider) {
+app.config(function ($routeProvider,$locationProvider,uiGmapGoogleMapApiProvider) {
 	$locationProvider.html5Mode(true);
 	$routeProvider
 	.when('/',{
@@ -21,8 +21,12 @@ app.config(function ($routeProvider,$locationProvider) {
         templateUrl: 'views/userdashboard.html',
         controller: 'DashboardCtrl'
       })
-    .otherwise( { 
+    .otherwise( {
     	redirectTo: '/'
     });
- 	
+		uiGmapGoogleMapApiProvider.configure({
+	        key: 'AIzaSyCbS6tJIroWAxSR9vNCwhyxerrkoN2i2Lw',
+	        v: '3.20', //defaults to latest 3.X anyhow
+	        libraries: 'weather,geometry,visualization,places,events'
+	    });
 })
