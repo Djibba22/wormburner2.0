@@ -1,7 +1,7 @@
 $gold:#948d33;
-$black:#FFF;
+$black:#000;
 $olivedrab:#5b9c01;
-
+// These variables can be applied all across the app for brand consistency
 
 /*######################  General #####################################  */
 /*###########################  Styles  #####################################  */
@@ -49,11 +49,16 @@ footer{
 
 /*######################  data card #####################################  */
 /*###########################  Styles  #####################################  */
-// .greeny{
-// 	background-color: #948d33;
-// 	color:white;
-// 	border-radius: 0px;
-// }
+.greeny{
+	background-color: #948d33;
+	color:white;
+	border-radius: 0px;
+}
+.black{
+	background-color: $black;
+	color:white;
+	border-radius: 0px;
+}
 .clubphoto{
 	box-shadow: 2px 2px 1px gray;
 	margin-left: 20%;

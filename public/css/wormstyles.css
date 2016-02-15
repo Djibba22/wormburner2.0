@@ -39,6 +39,16 @@ footer {
 
 /*######################  data card #####################################  */
 /*###########################  Styles  #####################################  */
+.greeny {
+  background-color: #948d33;
+  color: white;
+  border-radius: 0px; }
+
+.black {
+  background-color: #000;
+  color: white;
+  border-radius: 0px; }
+
 .clubphoto {
   box-shadow: 2px 2px 1px gray;
   margin-left: 20%;
