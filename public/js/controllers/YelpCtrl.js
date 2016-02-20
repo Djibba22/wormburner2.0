@@ -1,10 +1,13 @@
-app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray','Auth',function ($scope,$http,$firebaseArray,Auth) {
+app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArray','Auth',function ($scope,$http,$firebaseObject,$firebaseArray,Auth) {
 	       $scope.auth = Auth;
 	       var ref;
+
+		//Authentication with firebase onAuth
 			 $scope.auth.$onAuth(function(authData) {
 			  if (authData) {
-			  	ref = new Firebase("https://wormburnerapp.firebaseio.com/users/"+ authData.uid+"/favorites/");
-			  	$scope.userFavorites = $firebaseArray(ref);
+	//favorites query to display a list of the users favorites
+			  var	favoritesRef = new Firebase("https://wormburnerapp.firebaseio.com/users/"+ authData.uid+"/favorites/");
+			  	$scope.userFavorites = $firebaseObject(favoritesRef);
 			  	console.log($scope.userFavorites);
 			    console.log("Logged in as:", authData.uid);
 
@@ -36,8 +39,8 @@ app.controller('YelpCtrl', ['$scope' , '$http', '$firebaseArray','Auth',function
 			}).then(function successCallback(response) {
 				var latlong = response.data.loc;
 				var city = response.data.city;
-				console.log(response.data.city);
-			    console.log(response.data.loc);
+					console.log(latlong);
+			    console.log(city);
 			    getGolf(city,latlong)
 			  }, function errorCallback(response) {
 			    console.log("no juice today");

@@ -1,5 +1,7 @@
 app.controller("MapCtrl", function($scope, uiGmapGoogleMapApi) {
-
+//Variables
+// var infowindow = new google.maps.InfoWindow();
+// var service = new google.maps.places.PlacesService(map);
   $scope.map = { zoom: 12 };
   //Center Map on current location.
   navigator.geolocation.getCurrentPosition(function(pos){
@@ -9,17 +11,34 @@ app.controller("MapCtrl", function($scope, uiGmapGoogleMapApi) {
     }, function(error) {
       alert('Unable to get location: ' + error.message);
     };
-
   });
-    //Todo change the center of the map to be location.
-    //also add golf business results to the map.
-
-    // Do stuff with your $scope.
-    // Note: Some of the directives require at least something to be defined originally!
-    // e.g. $scope.markers = []
-
-    // uiGmapGoogleMapApi is a promise.
-    // The "then" callback function provides the google.maps object.
+//Search
+// service.nearbySearch({
+//   location:'',
+//   radius:500,
+//   types:['golf']
+// },
+//   callback);
+// function callback(results, status){
+//   if (status === google.maps.places.PlacesServiceStatus.OK){
+//     for (var i = 0;i < results.length;i++){
+//       createMarker(results[i]);
+//     }
+//   }
+// }
+// function createMarker(place){
+//   var placeLoc = place.geometry.location;
+//   var marker = new google.maps.Marker({
+//     map: map,
+//     position: place.geometry.location
+//   });
+//
+//   google.maps.event.addListener(marker, 'click', function(){
+//     infowindow.setContent(place.name);
+//     infowindow.open(map, this);
+//   });
+// }
+//This actually creates the map
     uiGmapGoogleMapApi.then(function(maps) {
 
     });

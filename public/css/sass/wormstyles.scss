@@ -65,7 +65,6 @@ footer{
 	border-radius: 4%;
 }
 .data-title{
-
 	font-family: 'NexaRustSlab-BlackShadow01-Free-webfont';
 }
 .data{
@@ -149,7 +148,6 @@ h1.text-center.wormbanner{
 h1.extras{
 	font-family: 'NexaRustExtras-Free-webfont';
 	font-size: 200px;
-	color:white;
 	margin-top: 0px;
 	color: #7A9E35;
 }
@@ -203,6 +201,11 @@ button.facelog{
 .highlight {
   background-color: #4D6C8C;
   color: #fff;
+}
+li.favoritesList{
+	color: $olivedrab;
+	font-family: 'nexa_rust_script_l0regular';
+	list-style-type: none;
 }
 
 /*######################  Customize #####################################  */
