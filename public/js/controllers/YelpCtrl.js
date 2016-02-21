@@ -80,7 +80,7 @@ app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArra
 	        	$scope.golfdata = new Array();
 
 	 			angular.forEach(data.data.businesses, function(value,key){
-	 				//console.log(key,values);
+	 				console.log(key,value);
 	 				$scope.golfdata.push(value);
 	 			})
 
