@@ -1,11 +1,13 @@
 <div class="row" class="center">
   <div class="col-sm-12 col-md-12"></div>
-	<h1 class="text-center">- Wormburner -</h1>
+  <div class="text-center home-logo">
+    <img class="WBlogo-index" src="/img/WormBurner_ChromeLogoText.jpg">
+  </div>
 	<h2 class="text-center lead">Golf Awaits</h2>
 </div>
 <div class="container" ng-controller="LoginCtrl">
 <div class="jumbotron">
-<h2>Login</h2>
+<h2 class="olivetext">Login</h2>
 	<form  ng-submit="login()">
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
@@ -15,8 +17,8 @@
     <label for="exampleInputPassword1">Password</label>
     <input ng-model="login.password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
-   <button type="ng-submit" class="btn btn-success">Log In</button>
-   <a type="button" data-ng-href="/register" class="btn btn-default">Register</a>
+   <button type="ng-submit" class="btn greeny">Log In</button>
+   <a type="button" data-ng-href="/register" class="btn black">Register</a>
 </form>
 </div>
 </div>

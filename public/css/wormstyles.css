@@ -6,6 +6,9 @@ body {
   /*background-image:url("../img/golf.jpg");*/
   background-color: #5b9c01; }
 
+.olivetext {
+  color: #5b9c01; }
+
 button, html, h1, input, select, textarea {
   font-family: Roboto,'Helvetica Neue',sans-serif;
   color: #7A9E35; }
@@ -145,7 +148,7 @@ h1.extras {
   margin: auto; }
 
 .jumbotron.signup {
-  background-color: #2A4C6F;
+  background-color: #948d33;
   color: white;
   width: 70%;
   margin: auto;
