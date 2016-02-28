@@ -51,6 +51,7 @@
 					<td id="hole{{$index}}" ng-repeat="score in card.front = (card.scores | limitTo:9) track by $index">
 						<input type="number" class="form-control input-md col-sm-1" ng-model="card.scores[$index]">
 					</td>
+	//The front nine holes are totaled individually form the back nine holes for a nine hole game.
 					<td id="front9Total">{{card.frontTotal = sum(card.front)}}</td>
 			</tr>
 			<th>Back Nine</th>
