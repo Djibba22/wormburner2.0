@@ -4,184 +4,81 @@
 	<h2>Welcome Back: <strong>{{user.userName}}</strong></h2>
 
 	<div class="row">
-		<h3>These are your favorite Courses so far</h3>
+		<h2>Your Favorited Courses:</h2>
 	 <div class="" ng-controller="YelpCtrl">
-	 <div data-ng-repeat="favorite in userFavorites">
+	 <div data-ng-repeat="favorite in favorites">
 		 <div class="row text-center">
-			 <li class="favoritesList">{{ user.favorites | lowercase  }}</li>
-		</div>
+			 <li class="favoritesList">{{ favorite.$value }}</li>
+		 </div>
 	 </div>
 	 </div>
 	</div>
 	<div class="row">
-<!-- ScoreCard-->
-<div class ="card" onload="restore()">
-
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-lg-6" id="teamA">
-        <div class="col-lg-12" id="teamAname">
-          <h1>Player 1</h1></div>
-        <div class="col-lg-12" id="scoreA">
-          <h1>0</h1></div>
-      </div>
-      <div class="col-lg-6" id="teamB">
-        <div class="col-lg-12" id="teamBname">
-          <h1>Player 2</h1></div>
-        <div class="col-lg-12" id="scoreB">
-          <h1>0</h1></div>
-      </div>
-    </div>
-    <div class="row table-bordered">
-      <div class="col-xs-2">
-        <h2>Innings</h2></div>
-      <div class="col-xs-1 table-bordered">
-        <h2>1</h2></div>
-      <div class="col-xs-1 table-bordered">
-        <h2>2</h2></div>
-      <div class="col-xs-1 table-bordered">
-        <h2>3</h2></div>
-      <div class="col-xs-1 table-bordered">
-        <h2>4</h2></div>
-      <div class="col-xs-1 table-bordered">
-        <h2>5</h2></div>
-      <div class="col-xs-1 table-bordered">
-        <h2>6</h2></div>
-      <div class="col-xs-1 table-bordered">
-        <h2>7</h2></div>
-      <div class="col-xs-1 table-bordered">
-        <h2>8</h2></div>
-      <div class="col-xs-1 table-bordered">
-        <h2>9</h2></div>
-    </div>
-    <div class="row table-bordered">
-      <div class="col-xs-2">
-        <h2>Player 1</h2></div>
-      <div class="col-xs-1 table-bordered highlight" id="top1">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="top2">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="top3">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="top4">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="top5">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="top6">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="top7">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="top8">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="top9">
-        <h2>0</h2></div>
-    </div>
-    <div class="row table-bordered">
-      <div class="col-xs-2">
-        <h2>Player 2</h2></div>
-      <div class="col-xs-1 table-bordered" id="bottom1">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="bottom2">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="bottom3">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="bottom4">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="bottom5">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="bottom6">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="bottom7">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="bottom8">
-        <h2>0</h2></div>
-      <div class="col-xs-1 table-bordered" id="bottom9">
-        <h2>0</h2></div>
-    </div>
-  </div>
-
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-
-  <div class="container text-center">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>Strokes</h1></div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 btn btn-primary btn-lg" href="#" onclick="scoreUp()">+</div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 btn btn-danger btn-lg" href="#" onclick="scoreDown()">-</div>
-        </div>
-			<!-- Scorecard now has branded colors applied to the DOM Elements -->
-      </div>
-      <div class="col-lg-6">
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-lg-12">
-              <h1>Player 1</h1>
-            </div>
-            <div class="row">
-              <div class="col-lg-12 highlight" id="top">
-                <h1 id="scoreA2">0</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="row">
-            <div class="col-lg-12">
-              <h1>Player 2</h1>
-            </div>
-            <div class="row">
-              <div class="col-lg-12" id="bottom">
-                <h1 id="scoreB2">0</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br/>
-    <br/>
-    <br/>
-
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>Change Input</h1></div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 btn btn-primary btn-lg" href="#" onclick="inningUp()">+</div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 btn btn-danger btn-lg" href="#" onclick="inningDown()">-</div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1>Scoring: </h1>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <h1 id="inning"> Player 1 Hole 1</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 btn btn-primary btn-lg" href="#" onclick="gameNew()">New Game</div>
-    </div>
-  </div>
+		<div class="col-md-6 center">
+		 <h1>ScoreCards</h1>
+	  </div>
+	</div>
+<div class="ScoreCard">
+<div class="table-responsive">
+	<table class="table table-hover">
+<div class="" ng-controller="DashboardCtrl">
+<div class="row">
+	<div class="scoreName col-md-6">
+		<h3>Course Name</h3>
+	</div>
+	<div class="scoreDate col-md-6">
+		<h3>Course Date:{{today}}</h3>
+	</div>
 </div>
+</div>
+		<thead>
+			<th>Name</th>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+			<th>4</th>
+			<th>5</th>
+			<th>6</th>
+			<th>7</th>
+			<th>8</th>
+			<th>9</th>
+			<th>OUT</th>
+		</thead>
+		<tbody>
+			<tr class="success" ng-repeat="card in cards">
+				<td id="playerName">{{card.user}}</td>
+					<td id="hole{{$index}}" ng-repeat="score in card.front = (card.scores | limitTo:9) track by $index">
+						<input type="number" class="form-control input-md col-sm-1" ng-model="card.scores[$index]">
+					</td>
+					<td id="front9Total">{{card.frontTotal = sum(card.front)}}</td>
+			</tr>
+			<th>Back Nine</th>
+			<th>10</th>
+			<th>11</th>
+			<th>12</th>
+			<th>13</th>
+			<th>14</th>
+			<th>15</th>
+			<th>16</th>
+			<th>17</th>
+			<th>18</th>
+			<th>IN</th>
+			<tr class="success" ng-repeat="card in cards">
+
+				<td id="playerName">{{card.user}}</td>
+
+					<td id="hole{{$index+8}}" ng-repeat=" score in card.scores | limitTo:9:9 track by $index">
+						<input type="number" class="form-control input-md col-sm-1" ng-model="card.scores[$index+8]">
+					</td>
+					<td id="back9Total">{{card.total = sum(card.scores)}}</td>
+			</tr>
+
+			<tr>
+				<td>
+					<a class="btn btn-primary" ng-click="saveCards()">Save</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 </div>

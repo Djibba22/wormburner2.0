@@ -1,10 +1,11 @@
 // This pulls in from weather underground the data which I have on the home page soo far
-  app.controller('HomeForecastController', function($scope, $http) {
+  app.controller('HomeForecastController', function($scope, $http,$rootScope) {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
                 var key = '97292890b778c782'; //Please see http://www.wunderground.com/
+                $rootScope.jsonpCount++
                 var service_url = "http://api.wunderground.com/api/" + key + "/forecast/geolookup/conditions/q/" + position.coords.latitude + "," + position.coords
-                    .longitude + ".json?callback=JSON_CALLBACK";
+                    .longitude + ".json?callback=angular.callbacks._"+$rootScope.jsonpCount;
                 $http.jsonp(service_url).success(function(data) {
                     $scope.city = data.location.city;
                     $scope.temperature = data.current_observation.temp_f;

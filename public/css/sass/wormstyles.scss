@@ -1,18 +1,15 @@
 $gold:#948d33;
 $black:#000;
 $olivedrab:#5b9c01;
+$roboto: 'Roboto', sans-serif;
 // These variables can be applied all across the app for brand consistency
 
 /*######################  General #####################################  */
 /*###########################  Styles  #####################################  */
 body{
-	padding-top: 20px;
-	padding-bottom: 20px;
-	/*background-image:url("../img/golf.jpg");*/
-  background-color: #5b9c01;
-	// background-repeat:no-repeat;
-    // background-position:50% 25%;
-    // z-index: -1;
+	background-attachment: fixed;
+	background-image:url("../img/light_honeycomb.png");
+
 }
 .olivetext{
 	color: $olivedrab;
@@ -37,9 +34,15 @@ footer{
 	height: 12px;
 	background: #000;
 }
+.container{
+	padding: 20px;
+	background-image:url("../img/hixs_pattern_evolution.png");
+}
+div.inline { float:left; }
+
 /*######################  Weather Widget #####################################  */
 /*###########################  Styles  #####################################  */
-#conditons,#temperature,#wind_condition{
+#location,#conditons,#temperature,#wind_condition{
   font-weight: bold;
   color: $gold;
 }
@@ -104,7 +107,7 @@ footer{
 /*######################  navigation #####################################  */
 /*###########################  Styles  #####################################  */
 .container.header{
-
+margin-bottom: 0px;
 }
 .header{
 	color: white;
@@ -130,7 +133,7 @@ a.indnav.reg{
 }
 .WBlogo-index{
 	height: 200px;
-	width: 250px;
+	width: 330px;
 }
 .local{
 	height: 20px;
@@ -194,6 +197,15 @@ button.facelog{
 .already{
 	margin-top: 50px;
 }
+
+/*######################  Dashboard Page #####################################  */
+/*###########################  Styles  #####################################  */
+li.favoritesList{
+	color: $olivedrab;
+	font-family: $roboto;
+	list-style-type: none;
+}
+
 /*######################  Score Card #####################################  */
 /*###########################  Styles  #####################################  */
 .card {
@@ -205,17 +217,13 @@ button.facelog{
   background-color: #4D6C8C;
   color: #fff;
 }
-li.favoritesList{
-	color: $olivedrab;
-	font-family: 'nexa_rust_script_l0regular';
-	list-style-type: none;
-}
+
 
 /*######################  Customize #####################################  */
 /*###########################  Styles  #####################################  */
 @media screen and(min-width: 768px){
 	.container{
-		max-width: 960px;
+		max-width: 1000px;
 	}
 }
 .container-narrow > hr{
