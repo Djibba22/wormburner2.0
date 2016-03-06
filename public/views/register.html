@@ -1,15 +1,15 @@
 <div class="row" class="center">
   <div class="col-sm-12 col-md-12"></div>
   <div class="text-center home-logo">
-    <img class="WBlogo-index" src="/img/WormBurner_ChromeLogoText.jpg">
+    <img class="WBlogo-login" src="/img/WormBurner_ChromeLogo.png">
   </div>
 	<h2 class="text-center lead">Golf Awaits</h2>
 </div>
-<div class="container" ng-controller="RegisterCtrl">
+<div class="register" ng-controller="RegisterCtrl">
   <p ng-if="message">Message: <strong>{{ message }}</strong></p>
   <p ng-if="error">Error: <strong>{{ error }}</strong></p>
 
-  <div  class="jumbotron signup">
+  <!-- <div  class="jumbotron signup"> -->
      <h2>Register</h2>
     	<form class="signup">
         <div class="form-group">
@@ -37,24 +37,24 @@
     <div class="row">
     <hr>
         <p class="text-center">- OR -</p>
+        <h4 class="text-center">Secure Social login</h4>
         <div ng-controller="FBCtrl">
         <div ng-hide="authData">
         <form>
             <button ng-click="auth.$authWithOAuthPopup('facebook')" class="btn btn-default facelog center-block">Login With Facebook</button>
         </form>
         </div>
-        <div ng-show="authData">
+        <div class="FBauthdata" ng-show="authData">
           <img src="{{authData.facebook.profileImageURL}}">
           <p>Hello, {{ authData.facebook.displayName }}</p>
           <p>{{userData.uid}}</p>
-
           <button ng-click="auth.$unauth()" class="btn btn-danger facelog center-block">Logout</button>
         </div>
       </div>
   </div>
-  </div>
+  <!-- </div> -->
 </div>
   <div class="row bottom">
-      <p class="text-center already">Already a member? <a href="/signin">Sign in Here</a></p>
+      <p class="text-center already">Already a member? <a href="/login">Sign in Here</a></p>
   </div>
 </div>

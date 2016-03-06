@@ -60,24 +60,7 @@ app.controller("RegisterCtrl", ["$scope", "Auth",
 			  }
 			});
 		}
-    
+
   }
 
 ]);
-
-
-		
-
-
-
-
-		
-
-
-
-
-
-
-	
-
-

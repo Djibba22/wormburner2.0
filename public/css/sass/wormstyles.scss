@@ -21,7 +21,6 @@ button, html,h1, input, select, textarea {
 footer{
 	padding-top: 19px;
 	color:#777;
-	border-top: 1px solid #e5e5e5;
 }
 #rectt {
 	margin-top: 50px;
@@ -38,17 +37,40 @@ footer{
 	padding: 20px;
 	background-image:url("../img/hixs_pattern_evolution.png");
 }
-div.inline { float:left; }
+
+
+/*######################  Blog Grid #####################################  */
+/*###########################  Styles  #####################################  */
+.portfolio-item .text{
+	padding:2%;
+}
+.portfolio-item a{
+	color:$olivedrab;
+}
+.portfolio-item p{
+	color:gray;
+}
+
 
 /*######################  Weather Widget #####################################  */
 /*###########################  Styles  #####################################  */
+.weather{
+	margin-left: 10%;
+}
 #location,#conditons,#temperature,#wind_condition{
   font-weight: bold;
   color: $gold;
 }
+div.inline {
+	float:left;
+	margin-left:2%;
+ }
 
 /*######################  Map #####################################  */
 /*###########################  Styles  #####################################  */
+.map{
+	margin: auto;
+}
 .angular-google-map-container { height: 250px;}
 
 
@@ -66,23 +88,29 @@ div.inline { float:left; }
 	border-radius: 0px;
 }
 .clubphoto{
-	box-shadow: 2px 2px 1px gray;
+	height: 150px;
 	margin-left: 20%;
-	border-radius: 4%;
+	border-radius: 50%;
 }
 .data-title{
+	color:$gold;
 	font-family: 'NexaRustSlab-BlackShadow01-Free-webfont';
 }
+.results{
+	margin:0 !important;
+}
 .data{
-	box-shadow: 2px 2px 2px black;
 	padding: 1%;
-	border:2px solid #0680b1;
-	border-radius:6px;
+	border-bottom:2px solid gray;
 	margin-bottom: 10px;
+}
+.biz{
+	font-family: $roboto;
+	color:$olivedrab;
 }
 .address{
 	margin-left: 10%;
-	color:#0680b1;
+	color:gray;
 }
 .teetime{
 
@@ -107,7 +135,7 @@ div.inline { float:left; }
 /*######################  navigation #####################################  */
 /*###########################  Styles  #####################################  */
 .container.header{
-margin-bottom: 0px;
+
 }
 .header{
 	color: white;
@@ -118,32 +146,39 @@ margin-bottom: 0px;
 }
 a.indnav:hover{
 	color: white;
-	background-color: #7A9E35;
+	background-color: transparent !important;
+	-webkit-transform: scale(1.2);
 }
 a.indnav.reg{
-	border-color: #7A9E35;
-	border: 1px solid;
-	border-radius: 0px;
+	// border-color: #7A9E35;
+	// border: 1px solid;
+	// border-radius: 0px;
 }
 .menulogo{
 	height: 50px;
 	width: 90px;
+}
+.menulogo:hover{
+	-webkit-transform: scale(1.2);
 }
 .home-logo{
 }
 .WBlogo-index{
 	height: 200px;
 	width: 330px;
+	margin: 25px auto;
 }
 .local{
 	height: 20px;
 	width:50%;
 }
 .bottom-buttons{
-	margin-top: 100px;
+	margin-top: 50px;
 }
 .lead{
 font-family: 'nexa_rust_script_l0regular';
+color: white;
+
 }
 /*######################  WebFont #####################################  */
 /*###########################  Styles  #####################################  */
@@ -184,8 +219,30 @@ h1.extras{
 	background-color: rgba(25, 25, 25, .5);
 	text-align: center;
 }
+/*######################  Login Page #####################################  */
+/*###########################  Styles  #####################################  */
+.login{
+	label{
+		color: gray;
+	}
+	#loginInputEmail{
+		border-radius: none !important;
+	}
+}
+.WBlogo-login{
+	height: 120px;
+	width: 230px;
+	margin: auto;
+}
 /*######################  Sign UP #####################################  */
 /*###########################  Styles  #####################################  */
+.register{
+	color:$gold;
+	.FBauthdata{
+		margin:auto;
+	}
+
+}
 form.signup{
 	width: 70%;
 	margin:auto;
@@ -195,11 +252,18 @@ button.facelog{
 	color: white;
 }
 .already{
+	color: white;
 	margin-top: 50px;
 }
 
 /*######################  Dashboard Page #####################################  */
 /*###########################  Styles  #####################################  */
+img.user{
+	height: 50px;
+}
+.dashboard{
+	color:$gold;
+}
 li.favoritesList{
 	color: $olivedrab;
 	font-family: $roboto;
@@ -239,7 +303,7 @@ li.favoritesList{
     padding-left: 0px;
  }
  .header{
- 	margin-bottom: 30px;
+
  }
  .jumbotron{
  	border-bottom: 0;

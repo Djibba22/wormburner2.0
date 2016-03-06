@@ -1,28 +1,31 @@
-<div class="container container-table">
+
+<div class="row" >
 	<!--//########## Weather  #################// -->
 		<!--//########## Container  #################// -->
+<hr>
 <div class="row">
-	<div class="weather col-md-6">
+	<div class="weather col-sm-12 col-md-8 col-lg-12">
 	 <div class="widget-box" ng-controller="HomeForecastController as forecastCtrl">
 		 <div class="widget-body">
 			 <div class="widget-main">
 				 <div class ="inline">
-					 <h4 ><i class="icon-comments"></i><span id="location">{{city}}</span></h4>
-				 </div>
-				 <div class ="inline">
 				   <img id="weather_img" src="{{weather_icon_src}}">
 			   </div>
 				 <div class ="inline">
-				 <p id="temperature"><span id="temperature">{{temperature}}</span>°F and <span id="description">{{description}}</span></p>
+					 <h4 ><i class="icon-comments"></i><span id="location">{{city}}</span></h4>
+				 </div>
+				 <div class ="inline">
+				 <h4 id="temperature"><span id="temperature">{{temperature}}</span>°F and <span id="description">{{description}}</span></h4>
 			   </div>
 				 <div class ="inline">
-				 <p id="wind_condition">Wind: <span id="wind_condition">{{wind_condition}}</span></p>
+				 <h4 id="wind_condition">Wind: <span id="wind_condition">{{wind_condition}}</span></h4>
 			   </div>
 			 </div>
 		 </div>
 	 </div>
  </div>
  </div>
+ <hr>
 	<div class="row x">
 			 <div class="text-center home-logo">
 				 <img class="WBlogo-index" src="/img/WormBurner_ChromeLogo.png">
@@ -35,10 +38,12 @@
 							 <a href="#">
 									 <img class="img-responsive" src="/img/golf1.jpg" alt="">
 							 </a>
+							 <div class="text">
 							 <h3>
 									 <a href="#">Conditions</a>
 							 </h3>
 							 <p>Always have the weather on hand paired with the local golf results.</p>
+						 </div>
 					 </div>
 					 <div class="col-md-4 portfolio-item">
 							 <a href="#">
@@ -61,9 +66,9 @@
 			 </div>
  <!-- Map Body Here -->
  <!-- respsonsive containers for elements with responsive imagery -->
- <div class="map col-md-8">
+ <div class="map col-md-8 col-lg-12">
 	 <div id="map_canvas" ng-controller="MapCtrl">
-	 <h3>Google Maps</h3>
+	 <h3 class="olivetext">Your Current Location</h3>
 		<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
   </div>
 
@@ -71,24 +76,23 @@
 
 
  </div>
-
+	<div class="row" class="center">
 <!-- //## controller for the Yelp API ##\\ -->
 	<div class="" ng-controller="YelpCtrl">
-		<div class="row" class="center">
+
 <!-- //### Main heading will be replaced  with slogan ###\\\ -->
 		<div class="text-center">
 			<h2 class="lead" >Find and Rate Courses on Yelp</h2>
 			<img class="yelpicon"  src="/img/yelp-icon.png">
 <!-- //## clickable results implements the easy use large button##\\ -->
-			<a class="greeny btn btn-lg btn-block" ng-click="getGolfDeals()">Find your Local Courses</a>
+			<a class="greeny btn" ng-click="getGolfDeals()">Find your Local Courses</a>
 		</div>
-		  <hr>
 <!-- //## This is the results list for now it is just yelp ##\\ -->
 <!-- //## Todo get the google place API in here!! ##\\ -->
-		  <div class="row">
-			<div class="data col-md-10-offset-1" data-ng-repeat="biz in golfdata">
+		  <div class="row results">
+			<div class="data col-md-8-offset-4" data-ng-repeat="biz in golfdata">
 			 <div class="data-title row text-center">
-				<h2><a ng-href="{{biz.url}}">{{biz.name}}</a></h2>
+				<h2><a class="biz" ng-href="{{biz.url}}">{{biz.name}}</a></h2>
 				 <div class="data-title row text-center">
 					<img class="yelptextlogo" src="/img/text-yelp-logo.png">
 					<h3>Rating <img src=" {{biz.rating_img_url}}"></h3>
@@ -113,7 +117,7 @@
 				<!-- <pre>{{biz | json}}</pre> -->
 			</div>
 		</div>
-		 <div class="bottom-buttons">
+		 <div class=" col-md-4 bottom-buttons">
 		 	<p>
 			  <a class="greeny btn right" data-ng-href="/login">Login</a>
 			  <a class="black btn  right" data-ng-href="/register">Register</a>
