@@ -14,7 +14,7 @@ app.controller('DashboardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 						scores: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 					},
 					{
-						user: 'Rachel',
+						user: 'Player 2',
 						scores: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 					}
 				];

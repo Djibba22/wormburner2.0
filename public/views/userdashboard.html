@@ -1,5 +1,6 @@
-
-
+<div class="register" ng-controller="RegisterCtrl">
+	<button ng-click="auth.$unauth()" class="btn btn-right">Logout</button>
+</div>
 <div class="dashboard">
 	<div class="col-sm-2 text-center">
 		<h3 class="AccountName"><img class="user" src="../img/user.png" alt="" /><strong>{{user.userName}}<hr></strong></h3>
@@ -73,8 +74,8 @@
 
 				<td id="playerName">{{card.user}}</td>
 
-					<td id="hole{{$index+8}}" ng-repeat=" score in card.scores | limitTo:9:9 track by $index">
-						<input type="number" class="form-control input-md col-sm-1" ng-model="card.scores[$index+8]">
+					<td id="hole{{$index+9}}" ng-repeat=" score in card.scores | limitTo:9:9 track by $index">
+						<input type="number" class="form-control input-md col-sm-1" ng-model="card.scores[$index+9]">
 					</td>
 					<td id="back9Total">{{card.total = sum(card.scores)}}</td>
 			</tr>
