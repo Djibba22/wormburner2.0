@@ -5,10 +5,11 @@ body {
   background-image: url("../img/light_honeycomb.png"); }
 
 .olivetext {
-  color: #5b9c01; }
+  color: #5b9c01;
+  font-family: "trade-gothic", helvetica, arial, sans-serif; }
 
 button, html, h1, input, select, textarea {
-  font-family: Roboto,'Helvetica Neue',sans-serif;
+  font-family: "trade-gothic",helvetica,arial,sans-serif;
   color: #7A9E35; }
 
 footer {
@@ -43,8 +44,14 @@ footer {
 
 /*######################  Weather Widget #####################################  */
 /*###########################  Styles  #####################################  */
-.weather {
-  margin-left: 10%; }
+.weather_card {
+  border: 1px solid white; }
+
+img.weather_img {
+  height: 50px; }
+
+.weathers {
+  background-color: white; }
 
 #location, #conditons, #temperature, #wind_condition {
   font-weight: bold;
@@ -56,6 +63,9 @@ div.inline {
 
 /*######################  Map #####################################  */
 /*###########################  Styles  #####################################  */
+.map_card {
+  border: 1px solid white; }
+
 .map {
   margin: auto; }
 
@@ -116,6 +126,14 @@ div.inline {
 
 /*######################  navigation #####################################  */
 /*###########################  Styles  #####################################  */
+.nav li {
+  height: 25px; }
+
+.navdiff {
+  margin-left: 10%;
+  font-family: "Trade Gothic Light",Arial;
+  color: gray; }
+
 .header {
   color: white; }
 

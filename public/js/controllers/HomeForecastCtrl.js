@@ -13,6 +13,16 @@
                     $scope.description = data.current_observation.weather;
                     $scope.wind_condition = data.current_observation.wind_string;
                     $scope.weather_icon_src = data.current_observation.icon_url;
+                //Forecast results
+                    $scope.forecast = data.forecast.simpleforecast.forecastday;
+                    $scope.icon = data.forecast.simpleforecast.forecastday[0].icon_url;
+                    $scope.day = data.forecast.simpleforecast.forecastday[0].date.weekday;
+                    $scope.temp = data.forecast.simpleforecast.forecastday[0].high.fahrenheit;
+                    $scope.conditions = data.forecast.simpleforecast.forecastday[0].conditions;
+                    $scope.maxwind = data.forecast.simpleforecast.forecastday[0].maxwind.mph;
+
+
+                    console.log(data.forecast.simpleforecast.forecastday);
                 });
             }, function() {
                 alert("That's weird! We couldn't find you!");
