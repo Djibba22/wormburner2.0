@@ -19,7 +19,7 @@
 <!-- //## Todo get the google place API in here!! ##\\ -->
 		<div class="row results">
 		<div class="data col-md-8-offset-4" data-ng-repeat="biz in golfdata">
-		 <div class="data-title row text-center">
+		 <div class="data-title row text-center col-sm-12">
 			<h2><a class="biz" ng-href="{{biz.url}}">{{biz.name}}</a></h2>
 			 <div class="data-title row text-center">
 				<img class="yelptextlogo" src="/img/text-yelp-logo.png">
@@ -27,8 +27,8 @@
 			 </div>
 			</div>
 			<div class="row">
-			<div class="col-md-2">
-				<img class="clubphoto" ng-src="{{biz.image_url}}">
+			<div class="col-md-2 col-sm-12-">
+				<img class="clubphoto img-responsive" ng-src="{{biz.image_url}}">
 			</div>
 	<!-- //## More basic list structure ##\\ -->
 			<div class="address col-md-6">
@@ -37,8 +37,8 @@
 				<p><strong>Phone:</strong> <a href="">{{biz.phone}}</a></p>
 			</div>
 			<div class="col-md-2">
-			 <a class="teetime btn btn-warning right" ng-click="favorite(biz.name)" >Favorite</a>
-			 <a class="scorebtn btn btn-primary right" data-ng-href="/login">Score Card</a>
+			 <a class="teetime btn btn-warning right btn-block" ng-click="favorite(biz.name)" >Favorite</a>
+			 <a class="scorebtn btn btn-primary right btn-block" data-ng-href="/login">Score Card</a>
 			</div>
 			</div>
 			<!-- <pre>{{biz | json}}</pre> -->
