@@ -57,7 +57,15 @@ footer{
 /*######################  Weather Widget #####################################  */
 /*###########################  Styles  #####################################  */
 .weather_card{
-	border: 1px solid white;
+	z-index: 2;
+	background-color: white;
+	padding: 0 !important;
+	h2{
+		margin-top:0;
+	}
+}
+.currentweather{
+	 padding-left: 2%;
 }
 img.weather_img{
 	height:50px;
@@ -69,20 +77,36 @@ img.weather_img{
 
 }
 #location,#conditons,#temperature,#wind_condition{
-  font-weight: bold;
+
   color: $gold;
 }
 div.inline {
 	float:left;
 	margin-left:2%;
  }
-
+ .card_header{
+	 line-height: 70%;
+	 padding:10px 0 0 5%;
+	 width:100%;
+	 color:gray;
+	 background-color: #1C1C1C;
+	 height:50px;
+ }
 /*######################  Map #####################################  */
 /*###########################  Styles  #####################################  */
 .map_card{
- border: 1px solid white;
+	z-index: 2;
+	background-color: white;
+	padding: 0 !important;
+	h2{
+		margin-top:0;
+	}
+}
+.map_body{
+	padding: 0 5px 11px 0;
 }
 .map{
+	padding: 0 !important;
 	margin: auto;
 }
 .angular-google-map-container { height: 250px;}
@@ -91,15 +115,25 @@ div.inline {
 
 /*######################  data card #####################################  */
 /*###########################  Styles  #####################################  */
+.getGolf_button{
+	width:60%;
+	margin: 0 auto 50px auto;
+}
 .greeny{
-	background-color: #948d33;
+	background-color: #726d27;
 	color:white;
-	border-radius: 0px;
+	border-radius: 0px !important;
+}
+.greeny:hover{
+	color: white;
+	text-decoration: none;
+	background-color: #948d33;
 }
 .black{
 	background-color: $black;
 	color:white;
 	border-radius: 0px;
+	width: 50%;
 }
 .clubphoto{
 	height: 150px;
