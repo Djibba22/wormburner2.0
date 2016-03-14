@@ -21,6 +21,10 @@ app.config(function ($routeProvider,$locationProvider,uiGmapGoogleMapApiProvider
         templateUrl: 'views/userdashboard.html',
         controller: 'DashboardCtrl'
       })
+	.when('/scorecard', {
+		    templateUrl: 'views/scorecard.html',
+		    controller: 'ScorecardCtrl'
+		  })
     .otherwise( {
     	redirectTo: '/'
     });

@@ -276,6 +276,9 @@ li.favoritesList {
 
 /*######################  Score Card #####################################  */
 /*###########################  Styles  #####################################  */
+.scorecard_container {
+  color: #948d33; }
+
 .card {
   background-color: #948d33;
   color: #fff; }
@@ -283,6 +286,9 @@ li.favoritesList {
 .highlight {
   background-color: #4D6C8C;
   color: #fff; }
+
+thead, th {
+  background-color: #1C1C1C; }
 
 /*######################  Customize #####################################  */
 /*###########################  Styles  #####################################  */
@@ -301,5 +307,63 @@ li.favoritesList {
 
   .jumbotron {
     border-bottom: 0; } }
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block; }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    position: relative;
+    padding-left: 50%; }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 10%;
+    padding-right: 10px;
+    white-space: nowrap; }
+
+  .form-control {
+    width: 60% !important;
+    margin-left: 10%;
+    color: #948d33; }
+
+  td:nth-of-type(2):before {
+    content: "1"; }
+
+  td:nth-of-type(3):before {
+    content: "2"; }
+
+  td:nth-of-type(4):before {
+    content: "3"; }
+
+  td:nth-of-type(5):before {
+    content: "4"; }
+
+  td:nth-of-type(6):before {
+    content: "5"; }
+
+  td:nth-of-type(7):before {
+    content: "6"; }
+
+  td:nth-of-type(8):before {
+    content: "7"; }
+
+  td:nth-of-type(9):before {
+    content: "8"; }
+
+  td:nth-of-type(10):before {
+    content: "9"; } }
 
 /*# sourceMappingURL=wormstyles.css.map */
