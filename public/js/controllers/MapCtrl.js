@@ -9,10 +9,18 @@ app.controller("MapCtrl", function($scope, uiGmapGoogleMapApi) {
       latitude: pos.coords.latitude,
       longitude: pos.coords.longitude
     },
+    $scope.marker = {
+    id: 0,
+    coords: {
+      latitude: pos.coords.latitude,
+      longitude: pos.coords.longitude
+    }
+  },
     function(error) {
       alert('Unable to get location: ' + error.message);
     };
   });
+
     uiGmapGoogleMapApi.then(function(maps) {
     });
 });
