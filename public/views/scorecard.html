@@ -18,6 +18,12 @@
     <h3>{{ card.name }}</h3>
   </div>
   <div class="scoreDate col-md-6">
+		<div class= ng-controller="YelpCtrl">
+			<div class= data-ng-repeat="biz in golfdata">
+				<h2><a class="biz" ng-href="{{biz.url}}">{{biz.name}}</a></h2>
+			</div>
+		</div>
+
     <h3>Course Date:{{today}}</h3>
   </div>
 </div>

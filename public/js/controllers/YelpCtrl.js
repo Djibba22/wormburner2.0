@@ -1,4 +1,4 @@
-app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArray','Auth','$rootScope',function ($scope,$http,$firebaseObject,$firebaseArray,Auth,$rootScope) {
+app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArray','Auth','$rootScope', '$routeParams',function ($scope,$http,$firebaseObject,$firebaseArray,Auth,$rootScope,$routeParams) {
 	$scope.auth = Auth;
 
 
@@ -10,8 +10,6 @@ app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArra
 			$scope.favorites = $firebaseArray(favoritesRef);
 			console.log("Favorites: ", $scope.favorites);
 			console.log("Logged in as:", authData.uid);
-
-
 		} else {
 			console.log("Logged out");
 		}
@@ -22,6 +20,7 @@ app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArra
 			console.log("added record with name: " + id);
 		});
 	}
+
 
 	$scope.getGolfDeals = function() {
 		//We need a function to set the location to the current locationof the user, we are using ipinfo.io

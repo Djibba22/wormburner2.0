@@ -16,8 +16,9 @@
 <body>
  <div class="container header">
     <div class="header">
+
 	    <ul class="nav nav-pills pull-right">
-	      <li><a type="" data-ng-href="/login" class="indnav">Log In <span class="navdiff">/</span></a></li>
+	      <li ng-controller="DashboardCtrl" ng-hide="authData"><a type="" data-ng-href="/login" class="indnav">Log In <span class="navdiff">/</span></a></li>
 	      <li><a type="" data-ng-href="/register" class="indnav reg">Register<span class="navdiff">/</span></a></li>
 				<li><a type="" data-ng-href="/userdashboard" class="indnav reg">Dashboard</a></li>
 	    </ul>

@@ -4,7 +4,7 @@ app.controller('DashboardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 	var ref;
 	$scope.auth.$onAuth(function(authData) {
 		if (authData) {
-
+			$scope.authData = authData;
 			ref = new Firebase("https://wormburnerapp.firebaseio.com/users/"+ authData.uid);
 			$scope.user = $firebaseObject(ref);
 			$scope.user.$loaded(function() {

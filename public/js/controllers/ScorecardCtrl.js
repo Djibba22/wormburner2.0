@@ -4,7 +4,6 @@ app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 	var ref;
 	$scope.auth.$onAuth(function(authData) {
 		if (authData) {
-
 			ref = new Firebase("https://wormburnerapp.firebaseio.com/users/"+ authData.uid);
 			$scope.user = $firebaseObject(ref);
 			$scope.user.$loaded(function() {
@@ -26,7 +25,6 @@ app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 
 			gamesRef = new Firebase("https://wormburnerapp.firebaseio.com/users/"+ authData.uid+"/games");
 			var games = $firebaseArray(gamesRef);
-
 			$scope.saveCards = function() {
 				games.$add({
 					//  date:
