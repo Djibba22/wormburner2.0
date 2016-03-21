@@ -130,10 +130,14 @@ div.inline {
   color: white; }
 
 .teetime {
+  background-color: #666600;
+  color: white;
   border-radius: 0px !important;
   margin-top: 10px; }
 
 .scorebtn {
+  color: white;
+  background-color: #33CC33;
   border-radius: 0px !important;
   margin-top: 10px; }
 

@@ -86,6 +86,11 @@ app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArra
 				console.log(error);
 			});
 		}
+		// console.log($scope.golfdata.display_address);
+	// 	String.prototype.cleanup = function() {
+  //  return this.toLowerCase().replace(/[^a-zA-Z0-9]+/g, "-");
+	// 	}
+	// 		var clean = "Hello World".cleanup();
 
 
 	}
