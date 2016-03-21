@@ -24,10 +24,10 @@ app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 			})
 
 			gamesRef = new Firebase("https://wormburnerapp.firebaseio.com/users/"+ authData.uid+"/games");
-			var games = $firebaseArray(gamesRef);
-			console.log(games);
+			$scope.games = $firebaseArray(gamesRef);
+			console.log($scope.games);
 			$scope.saveCards = function() {
-				games.$add({
+				$scope.games.$add({
 					date:$scope.today,
 					courseName: $scope.courseName,
 					cards: $scope.cards

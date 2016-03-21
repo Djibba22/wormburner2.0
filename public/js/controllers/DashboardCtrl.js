@@ -22,6 +22,8 @@ app.controller('DashboardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 
 			gamesRef = new Firebase("https://wormburnerapp.firebaseio.com/users/"+ authData.uid+"/games");
 			var games = $firebaseArray(gamesRef);
+			var query = gamesRef.orderByChild("timestamp").limitToLast(25);
+			$scope.filteredgames = $firebaseArray(query);
 
 			$scope.saveCards = function() {
 				games.$add({
