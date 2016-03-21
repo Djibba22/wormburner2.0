@@ -16,8 +16,8 @@ body{
 	font-family: $gothic;
 }
 button, html,h1, input, select, textarea {
-  font-family: "trade-gothic",helvetica,arial,sans-serif;
-  color: #7A9E35;
+	font-family: "trade-gothic",helvetica,arial,sans-serif;
+	color: #7A9E35;
 }
 footer{
 	padding-top: 19px;
@@ -51,7 +51,7 @@ footer{
 	}
 }
 .currentweather{
-	 padding-left: 2%;
+	padding-left: 2%;
 }
 img.weather_img{
 	height:50px;
@@ -64,20 +64,20 @@ img.weather_img{
 }
 #location,#conditons,#temperature,#wind_condition{
 
-  color: $gold;
+	color: $gold;
 }
 div.inline {
 	float:left;
 	margin-left:2%;
- }
- .card_header{
-	 line-height: 70%;
-	 padding:10px 0 0 5%;
-	 width:100%;
-	 color:gray;
-	 background-color: #1C1C1C;
-	 height:50px;
- }
+}
+.card_header{
+	line-height: 70%;
+	padding:10px 0 0 5%;
+	width:100%;
+	color:gray;
+	background-color: #1C1C1C;
+	height:50px;
+}
 /*######################  Map #####################################  */
 /*###########################  Styles  #####################################  */
 .map_card{
@@ -119,7 +119,7 @@ div.inline {
 	width: 50%;
 }
 .clubphoto{
-  height: 200px;
+	height: 200px;
 	margin: auto;
 }
 .data-title{
@@ -143,8 +143,8 @@ div.inline {
 	color:white;
 }
 .teetime{
- border-radius: 0px !important;
- margin-top: 10px;
+	border-radius: 0px !important;
+	margin-top: 10px;
 }
 .scorebtn{
 	border-radius: 0px !important;
@@ -165,7 +165,7 @@ div.inline {
 /*######################  navigation #####################################  */
 /*###########################  Styles  #####################################  */
 .nav li{
-height:25px;
+	height:25px;
 }
 .navdiff{
 	margin-left: 10%;
@@ -214,8 +214,8 @@ a.indnav.reg{
 	margin-top: 50px;
 }
 .lead{
-font-family: 'nexa_rust_script_l0regular';
-color: white;
+	font-family: 'nexa_rust_script_l0regular';
+	color: white;
 
 }
 /*######################  WebFont #####################################  */
@@ -302,17 +302,19 @@ img.user{
 .dashboard{
 	color:$gold;
 }
-li.favoritesList{
+.favoritesList{
 	color: $olivedrab;
-	font-family: $roboto;
-	list-style-type: none;
+  font-family: 'nexa_rust_script_l0regular';
+	
 }
 
 /*######################  Score Card #####################################  */
 /*###########################  Styles  #####################################  */
+input.form-control.input-md.col-sm-1{
+	border: 2px solid $gold !important;
+}
 .scorecard_container{
 	color: $gold;
-
 	.header{
 		h2{
 			color: $gold;
@@ -328,15 +330,16 @@ li.favoritesList{
 	.cdate{
 		color:black;
 	}
+
 }
 .card {
-  background-color: #948d33;
-  color: #fff;
+	background-color: #948d33;
+	color: #fff;
 }
 
 .highlight {
-  background-color: #4D6C8C;
-  color: #fff;
+	background-color: #4D6C8C;
+	color: #fff;
 }
 thead, th{
 	background-color:#1C1C1C;
@@ -359,15 +362,15 @@ thead, th{
 	.header,
 	.marketing,
 	.footer {
-    padding-right: 0px;
-    padding-left: 0px;
- }
- .header{
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	.header{
 
- }
- .jumbotron{
- 	border-bottom: 0;
- }
+	}
+	.jumbotron{
+		border-bottom: 0;
+	}
 }
 @media
 only screen and (max-width: 760px),
@@ -405,13 +408,13 @@ only screen and (max-width: 760px),
 		margin-left: 10%;
 		color:$gold;
 	}
-td:nth-of-type(2):before { content: "1"; }
-td:nth-of-type(3):before { content: "2"; }
-td:nth-of-type(4):before { content: "3"; }
-td:nth-of-type(5):before { content: "4"; }
-td:nth-of-type(6):before { content: "5"; }
-td:nth-of-type(7):before { content: "6"; }
-td:nth-of-type(8):before { content: "7"; }
-td:nth-of-type(9):before { content: "8"; }
-td:nth-of-type(10):before { content: "9"; }
+	td:nth-of-type(2):before { content: "1"; }
+	td:nth-of-type(3):before { content: "2"; }
+	td:nth-of-type(4):before { content: "3"; }
+	td:nth-of-type(5):before { content: "4"; }
+	td:nth-of-type(6):before { content: "5"; }
+	td:nth-of-type(7):before { content: "6"; }
+	td:nth-of-type(8):before { content: "7"; }
+	td:nth-of-type(9):before { content: "8"; }
+	td:nth-of-type(10):before { content: "9"; }
 }

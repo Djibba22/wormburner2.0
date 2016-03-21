@@ -32,7 +32,7 @@ app.controller('DashboardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 			}
 
 		} else {
-			console.log("Logged out");
+			// console.log("Logged out");
 		}
 	})
 	//Here we get the current Date for ScoreCard
@@ -48,7 +48,7 @@ app.controller('DashboardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 		mm='0'+mm
 	}
 	$scope.today = mm+'/'+dd+'/'+yyyy;
-	console.log($scope.today);
+	// console.log($scope.today);
 
 	//Here we need to set up the scorecard with variables for use.
 

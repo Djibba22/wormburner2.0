@@ -1,136 +1,136 @@
 <div class="row x">
-		 <div class="text-center home-logo">
-			 <img class="WBlogo-index" src="/img/WormBurner_ChromeLogo.png">
-		 </div>
- </div>
- <div class="row" class="center">
-<!-- //## controller for the Yelp API ##\\ -->
-<div class="" ng-controller="YelpCtrl">
-<!-- //### Main heading will be replaced  with slogan ###\\\ -->
-	<div class="text-center">
-		<h2 class="lead" >WORMBURNER</h2>
-		<!-- <img class="yelpicon"  src="/img/yelp-icon.png"> -->
-<!-- //## clickable results implements the easy use large button##\\ -->
-	<div class="getGolf_button">
-		<a class="greeny btn-lg btn-block" ng-click="getGolfDeals()">Find your Local Courses</a>
-	</div>
-	</div>
-<!-- //## This is the results list for now it is just yelp ##\\ -->
-<!-- //## Todo get the google place API in here!! ##\\ -->
-		<div class="row results">
-		<div class="data col-md-8-offset-4" data-ng-repeat="biz in golfdata">
-		 <div class="data-title row text-center col-sm-12">
-			<h2><a class="biz" ng-href="{{biz.url}}">{{biz.name}}</a></h2>
-			 <div class="data-title row text-center">
-				<img class="yelptextlogo" src="/img/text-yelp-logo.png">
-				<h3>Rating <img src=" {{biz.rating_img_url}}"></h3>
-			 </div>
-			</div>
-			<div class="row">
-			<div class="col-md-2 col-sm-12-">
-				<img class="clubphoto img-responsive" ng-src="{{biz.image_url}}">
-			</div>
-	<!-- //## More basic list structure ##\\ -->
-			<div class="address col-md-6">
-				<p><strong>Address:</strong>{{biz.location.display_address}}</p>
-				<p><strong>City:</strong> {{biz.location.city}}</p>
-				<p><strong>Phone:</strong> <a href="">{{biz.phone}}</a></p>
-			</div>
-			<div class="col-md-2">
-			 <a class="teetime btn btn-warning right btn-block" ng-click="favorite(biz.name)" >Favorite</a>
-			 <a class="scorebtn btn btn-primary right btn-block" ng-click="newCard(biz.name)">Score Card</a>
-			</div>
-			</div>
-			<!-- <pre>{{biz | json}}</pre> -->
-		</div>
+	<div class="text-center home-logo">
+		<img class="WBlogo-index" src="/img/WormBurner_ChromeLogo.png">
 	</div>
 </div>
+<div class="row" class="center">
+	<!-- //## controller for the Yelp API ##\\ -->
+	<div class="" ng-controller="YelpCtrl">
+		<!-- //### Main heading will be replaced  with slogan ###\\\ -->
+		<div class="text-center">
+			<h2 class="lead" >WORMBURNER</h2>
+			<!-- <img class="yelpicon"  src="/img/yelp-icon.png"> -->
+			<!-- //## clickable results implements the easy use large button##\\ -->
+			<div class="getGolf_button">
+				<a class="greeny btn-lg btn-block" ng-click="getGolfDeals()">Find your Local Courses</a>
+			</div>
+		</div>
+		<!-- //## This is the results list for now it is just yelp ##\\ -->
+		<!-- //## Todo get the google place API in here!! ##\\ -->
+		<div class="row results">
+			<div class="data col-md-8-offset-4" data-ng-repeat="biz in golfdata">
+				<div class="data-title row text-center col-sm-12">
+					<h2><a class="biz" ng-href="{{biz.url}}">{{biz.name}}</a></h2>
+					<div class="data-title row text-center">
+						<img class="yelptextlogo" src="/img/text-yelp-logo.png">
+						<h3>Rating <img src=" {{biz.rating_img_url}}"></h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-2 col-sm-12-">
+						<img class="clubphoto img-responsive" ng-src="{{biz.image_url}}">
+					</div>
+					<!-- //## More basic list structure ##\\ -->
+					<div class="address col-md-6">
+						<p><strong>Address:</strong>{{biz.location.display_address}}</p>
+						<p><strong>City:</strong> {{biz.location.city}}</p>
+						<p><strong>Phone:</strong> <a href="">{{biz.phone}}</a></p>
+					</div>
+					<div class="col-md-2">
+						<a class="teetime btn btn-warning right btn-block" ng-click="favorite(biz.name)" >Favorite</a>
+						<a class="scorebtn btn btn-primary right btn-block" ng-click="newCard(biz.name)">Score Card</a>
+					</div>
+				</div>
+				<!-- <pre>{{biz | json}}</pre> -->
+			</div>
+		</div>
+	</div>
 </div>
 <!--//########## Weather  #################// -->
-	<!--//########## Container  #################// -->
+<!--//########## Container  #################// -->
 <div class="row weather_map" >
-<div class="weather_card col-lg-6">
-	<div class="card_header">
-		<h2>WEATHER</h2>
-	</div>
-	<div class="weather col-lg-12">
-	<div class="row" ng-controller="HomeForecastController as forecastCtrl">
-		<div class="currentweather">
-			<h4 ><span id="location">{{city}}</span></h4>
-			<img id="weather_img" src={{weather_icon_src}}>
-			<h4 id="temperature"><span id="temperature">{{temperature}}</span>°F and <span id="description">{{description}}</span></h4>
-			<h4 id="wind_condition">Wind: <span id="wind_condition">{{wind_condition}}</span></h4>
-		</div>
-		<div class="" data-ng-repeat= "day in forecast">
-			<div class="weathers col-md-3 col-sm-3 col-xs-3 text-center">
-			 <p>{{day.date.weekday}}</p>
-			 <img id="weather_img" src={{day.icon_url}}>
-			 <p>{{day.high.fahrenheit}}</p>
-			 <p>{{day.conditions}}</p>
-		 </div>
-		</div>
-	</div>
-	</div>
-</div>
-<div class="map_card col-lg-6">
-	<!-- Map Body Here -->
-	<div class="map col-lg-12">
+	<div class="weather_card col-lg-6">
 		<div class="card_header">
-			<h2>MAP</h2>
+			<h2>WEATHER</h2>
 		</div>
-		<div class="map_body">
-		<div id="map_canvas" ng-controller="MapCtrl">
-		 <h3 class="olivetext">Your Current Location</h3>
-		 <ui-gmap-google-map center='map.center' zoom='map.zoom'>
-			 <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
-        </ui-gmap-marker>
-			</ui-gmap-google-map>
+		<div class="weather col-lg-12">
+			<div class="row" ng-controller="HomeForecastController as forecastCtrl">
+				<div class="currentweather">
+					<h4 ><span id="location">{{city}}</span></h4>
+					<img id="weather_img" src={{weather_icon_src}}>
+					<h4 id="temperature"><span id="temperature">{{temperature}}</span>°F and <span id="description">{{description}}</span></h4>
+					<h4 id="wind_condition">Wind: <span id="wind_condition">{{wind_condition}}</span></h4>
+				</div>
+				<div class="" data-ng-repeat= "day in forecast">
+					<div class="weathers col-md-3 col-sm-3 col-xs-3 text-center">
+						<p>{{day.date.weekday}}</p>
+						<img id="weather_img" src={{day.icon_url}}>
+						<p>{{day.high.fahrenheit}}</p>
+						<p>{{day.conditions}}</p>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
+	<div class="map_card col-lg-6">
+		<!-- Map Body Here -->
+		<div class="map col-lg-12">
+			<div class="card_header">
+				<h2>MAP</h2>
+			</div>
+			<div class="map_body">
+				<div id="map_canvas" ng-controller="MapCtrl">
+					<h3 class="olivetext">Your Current Location</h3>
+					<ui-gmap-google-map center='map.center' zoom='map.zoom'>
+						<ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+						</ui-gmap-marker>
+					</ui-gmap-google-map>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
+
+<!-- SportsRadar Data Row -->
+<div class="row">
+	<!-- The logo and the weather were both moved up above the responsive leaderboard articles here. -->
+	<div class="col-md-4 portfolio-item">
+		<a href="#">
+			<img class="img-responsive" src="/img/golf1.jpg" alt="">
+		</a>
+		<div class="text">
+			<h3>
+				<a href="#">Conditions</a>
+			</h3>
+			<p>Always have the weather on hand paired with the local golf results.</p>
+		</div>
+	</div>
+	<div class="col-md-4 portfolio-item">
+		<a href="#">
+			<img class="img-responsive" src="/img/golf2.jpg" alt="">
+		</a>
+		<h3>
+			<a href="#">Closest Results</a>
+		</h3>
+		<p>Get golf location results that are closest to where you are at all times.</p>
+	</div>
+	<div class="col-md-4 portfolio-item">
+		<a href="#">
+			<img class="img-responsive" src="/img/golf3.jpg" alt="">
+		</a>
+		<h3>
+			<a href="#">ScoreCard</a>
+		</h3>
+		<p>Where ever you decide to golf, you can use our dynamic scorecard to keep a record of your game.</p>
+	</div>
 </div>
 
-
-	<!-- SportsRadar Data Row -->
-			 <div class="row">
-				  <!-- The logo and the weather were both moved up above the responsive leaderboard articles here. -->
-					 <div class="col-md-4 portfolio-item">
-							 <a href="#">
-									 <img class="img-responsive" src="/img/golf1.jpg" alt="">
-							 </a>
-							 <div class="text">
-							 <h3>
-									 <a href="#">Conditions</a>
-							 </h3>
-							 <p>Always have the weather on hand paired with the local golf results.</p>
-						 </div>
-					 </div>
-					 <div class="col-md-4 portfolio-item">
-							 <a href="#">
-									 <img class="img-responsive" src="/img/golf2.jpg" alt="">
-							 </a>
-							 <h3>
-									 <a href="#">Closest Results</a>
-							 </h3>
-							 <p>Get golf location results that are closest to where you are at all times.</p>
-					 </div>
-					 <div class="col-md-4 portfolio-item">
-							 <a href="#">
-									 <img class="img-responsive" src="/img/golf3.jpg" alt="">
-							 </a>
-							 <h3>
-									 <a href="#">ScoreCard</a>
-							 </h3>
-							 <p>Where ever you decide to golf, you can use our dynamic scorecard to keep a record of your game.</p>
-					 </div>
-			 </div>
-
-		 <div class=" col-md-4 bottom-buttons">
-		 	<p>
-			  <a class="greeny btn right" data-ng-href="/login">Login</a>
-			  <a class="black btn  right" data-ng-href="/register">Register</a>
-			</p>
-		 </div>
-	 </div>
- </div>
+<div class=" col-md-4 bottom-buttons">
+	<p>
+		<a class="greeny btn right" data-ng-href="/login">Login</a>
+		<a class="black btn  right" data-ng-href="/register">Register</a>
+	</p>
+</div>
+</div>
+</div>

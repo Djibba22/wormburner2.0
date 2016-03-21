@@ -1,18 +1,38 @@
-<div class="register" ng-controller="RegisterCtrl">
-	<button ng-click="auth.$unauth()" class="btn btn-right">Logout</button>
-</div>
 <div class="dashboard">
+<div class="row">
 	<div class="col-sm-2 text-center">
-		<h3 class="AccountName"><img class="user" src="../img/user.png" alt="" /><strong>{{user.userName}}<hr></strong></h3>
+			<h3 class="AccountName"><img class="user" src="../img/user.png" alt="" /><strong>{{user.userName}}<hr></strong></h3>
+			<button ng-controller="RegisterCtrl" ng-click="auth.$unauth()" class="btn btn-right">Logout</button>
+		</div>
+		<div class="col-md-8">
+			<div class="text-center home-logo">
+				<img class="WBlogo-index" src="/img/WormBurner_ChromeLogo.png">
+			</div>
+		</div>
 	</div>
-	<div  class="col-sm-6 col-sm-offset-1">
-		<h2>Your Favorited Courses:</h2>
-	 <div class="" ng-controller="YelpCtrl">
-	 <div data-ng-repeat="favorite in favorites">
-		 <div class="row text-center">
-			 <li class="favoritesList">{{ favorite.$value }}</li>
-		 </div>
-	 </div>
-	 </div>
+	<div class="row">
+		<div  class="col-md-6">
+			<h2>Your Favorited Courses:</h2>
+			<div class="" ng-controller="YelpCtrl">
+				<div data-ng-repeat="favorite in favorites">
+					<div class="row text-center">
+						<div class="">
+							<h3 class="favoritesList">{{ favorite.$value }}</h3>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div  class="col-md-6">
+			<h2>Your Saved Scores:</h2>
+			<div class="" ng-controller="ScorecardCtrl">
+				<div data-ng-repeat="game in games">
+					<div class="row text-center">
+						<li class="favoritesList">{{ games.$value }}</li>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-</div>
+	</div>

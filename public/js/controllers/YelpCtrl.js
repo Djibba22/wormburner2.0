@@ -20,9 +20,7 @@ app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArra
 			console.log("added record with name: " + id);
 		});
 	}
-	// if ($routeParams.biz.name){
-	// 	console.log('The courseId for this scorecard is' + $routeParams.biz.name);
-	// }
+	// New score card function that creates a brand new card for the user
 	$scope.newCard = function(name){
 		console.log('course name is ' + name);
 		$location.path('/scorecard/' + name);

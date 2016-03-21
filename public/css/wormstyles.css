@@ -269,13 +269,15 @@ img.user {
 .dashboard {
   color: #948d33; }
 
-li.favoritesList {
+.favoritesList {
   color: #5b9c01;
-  font-family: "Roboto", sans-serif;
-  list-style-type: none; }
+  font-family: 'nexa_rust_script_l0regular'; }
 
 /*######################  Score Card #####################################  */
 /*###########################  Styles  #####################################  */
+input.form-control.input-md.col-sm-1 {
+  border: 2px solid #948d33 !important; }
+
 .scorecard_container {
   color: #948d33; }
   .scorecard_container .header {

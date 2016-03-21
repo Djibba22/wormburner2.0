@@ -1,73 +1,72 @@
 <div class="scorecard_container">
-<div class="register" ng-controller="RegisterCtrl">
-	<a class="btn btn-right" data-ng-href="/login" ng-click="auth.$unauth()">Logout</a>
-</div>
-
-<div class="ScoreCard">
- <!-- the scorecard is split to view the front 8 and the back 9 repsonsively -->
-<div class="table-responsive">
-  <table class="table table-hover col-sm-12 table-condensed cf">
-	<div class="" ng-controller="ScorecardCtrl">
-	<div class="row">
-	  <div class="header col-lg-12 text-center">
-			<div class="cname col-lg-6">
-				<h2>{{courseName}}</h2>
-			</div>
-			<div class="cdate col-lg-6 text-center">
-				<h3>{{today}}</h3>
-			</div>
-	  </div>
+	<div class="register" ng-controller="RegisterCtrl">
+		<a class="btn btn-right" data-ng-href="/login" ng-click="auth.$unauth()">Logout</a>
 	</div>
 
-    <thead>
-    <th>FRONT NINE</th>
-    <th>1</th>
-    <th>2</th>
-    <th>3</th>
-    <th>4</th>
-    <th>5</th>
-    <th>6</th>
-    <th>7</th>
-    <th>8</th>
-    <th>9</th>
-    <th>OUT</th>
-  </thead>
-  <tbody>
-    <tr ng-repeat="card in cards">
-      <td id="playerName">{{card.user}}</td>
-        <td id="hole{{$index}}" ng-repeat="score in card.front = (card.scores | limitTo:9) track by $index">
-          <input type="number" class="form-control input-md col-sm-1" ng-model="card.scores[$index]">
-        </td>
-<!-- The front nine holes are totaled individually form the back nine holes for a nine hole game. -->
-        <td id="front9Total">{{card.frontTotal = sum(card.front)}}</td>
-    </tr>
-    <th>BACK NINE</th>
-    <th>10</th>
-    <th>11</th>
-    <th>12</th>
-    <th>13</th>
-    <th>14</th>
-    <th>15</th>
-    <th>16</th>
-    <th>17</th>
-    <th>18</th>
-    <th>IN</th>
-    <tr ng-repeat="card in cards">
-      <td id="playerName">{{card.user}}</td>
-        <td id="hole{{$index+9}}" ng-repeat=" score in card.scores | limitTo:9:9 track by $index">
-          <input type="number" class="form-control input-md col-sm-1" ng-model="card.scores[$index+9]">
-        </td>
-        <td id="back9Total">{{card.total = sum(card.scores)}}</td>
-    </tr>
+	<div class="ScoreCard">
+		<!-- the scorecard is split to view the front 8 and the back 9 repsonsively -->
+		<div class="table-responsive">
+			<table class="table table-hover col-sm-12 table-condensed cf">
+				<div class="" ng-controller="ScorecardCtrl">
+					<div class="row">
+						<div class="header col-lg-12 text-center">
+							<div class="cname col-lg-6">
+								<h2>{{courseName}}</h2>
+							</div>
+							<div class="cdate col-lg-6 text-center">
+								<h3>{{today}}</h3>
+							</div>
+						</div>
+					</div>
 
-    <tr>
-      <td>
-<!-- The abilty to save the score with front total and back total with the saveCards function -->
-        <a class="btn btn-primary" ng-click="saveCards()">Save</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-</div>
+					<thead>
+						<th>FRONT NINE</th>
+						<th>1</th>
+						<th>2</th>
+						<th>3</th>
+						<th>4</th>
+						<th>5</th>
+						<th>6</th>
+						<th>7</th>
+						<th>8</th>
+						<th>9</th>
+						<th>OUT</th>
+					</thead>
+					<tbody>
+						<tr ng-repeat="card in cards">
+							<td id="playerName">{{card.user}}</td>
+							<td id="hole{{$index}}" ng-repeat="score in card.front = (card.scores | limitTo:9) track by $index">
+								<input type="number" class="form-control input-md col-sm-1" ng-model="card.scores[$index]">
+							</td>
+							<!-- The front nine holes are totaled individually form the back nine holes for a nine hole game. -->
+							<td id="front9Total">{{card.frontTotal = sum(card.front)}}</td>
+						</tr>
+						<th>BACK NINE</th>
+						<th>10</th>
+						<th>11</th>
+						<th>12</th>
+						<th>13</th>
+						<th>14</th>
+						<th>15</th>
+						<th>16</th>
+						<th>17</th>
+						<th>18</th>
+						<th>IN</th>
+						<tr ng-repeat="card in cards">
+							<td id="playerName">{{card.user}}</td>
+							<td id="hole{{$index+9}}" ng-repeat=" score in card.scores | limitTo:9:9 track by $index">
+								<input type="number" class="form-control input-md col-sm-1" ng-model="card.scores[$index+9]">
+							</td>
+							<td id="back9Total">{{card.total = sum(card.scores)}}</td>
+						</tr>
+						<tr>
+							<td>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- The abilty to save the score with front total and back total with the saveCards function -->
+			<a class="btn btn-success btn-block" ng-click="saveCards()">Save this Score Card</a>
+		</div>
+	</div>

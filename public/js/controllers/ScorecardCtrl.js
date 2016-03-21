@@ -25,6 +25,7 @@ app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 
 			gamesRef = new Firebase("https://wormburnerapp.firebaseio.com/users/"+ authData.uid+"/games");
 			var games = $firebaseArray(gamesRef);
+			console.log(games);
 			$scope.saveCards = function() {
 				games.$add({
 					date:$scope.today,
@@ -50,7 +51,7 @@ app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 		mm='0'+mm
 	}
 	$scope.today = mm+'/'+dd+'/'+yyyy;
-	console.log($scope.today);
+	// console.log($scope.today);
 
 	//Here we need to set up the scorecard with variables for use.
 	$scope.sum = function(scores){
@@ -61,5 +62,5 @@ app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 		return total;
 	}
 	$scope.courseName = $route.current.params.name;
-	console.log($scope.courseName);
+	// console.log($scope.courseName);
 }]);
