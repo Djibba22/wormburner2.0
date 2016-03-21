@@ -1,4 +1,4 @@
-app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArray','Auth','$rootScope', '$routeParams',function ($scope,$http,$firebaseObject,$firebaseArray,Auth,$rootScope,$routeParams) {
+app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArray','Auth','$rootScope', '$routeParams','$location',function ($scope,$http,$firebaseObject,$firebaseArray,Auth,$rootScope,$routeParams,$location) {
 	$scope.auth = Auth;
 
 
@@ -19,6 +19,13 @@ app.controller('YelpCtrl', ['$scope' , '$http','$firebaseObject', '$firebaseArra
 		$scope.favorites.$add(id).then(function() {
 			console.log("added record with name: " + id);
 		});
+	}
+	// if ($routeParams.biz.name){
+	// 	console.log('The courseId for this scorecard is' + $routeParams.biz.name);
+	// }
+	$scope.newCard = function(name){
+		console.log('course name is ' + name);
+		$location.path('/scorecard/' + name);
 	}
 
 

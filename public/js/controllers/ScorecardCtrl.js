@@ -1,4 +1,4 @@
-app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebaseObject','$location',"Auth", function ($scope,$http,$firebaseArray,$firebaseObject,$location,Auth){
+app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebaseObject','$location',"Auth",'$routeParams','$route', function ($scope,$http,$firebaseArray,$firebaseObject,$location,Auth,$routeParams,$route){
 	//Here we need to check the database for authentication
 	$scope.auth = Auth;
 	var ref;
@@ -27,8 +27,8 @@ app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 			var games = $firebaseArray(gamesRef);
 			$scope.saveCards = function() {
 				games.$add({
-					//  date:
-					//  players: "test, Rachel"
+					date:$scope.today,
+					courseName: $scope.courseName,
 					cards: $scope.cards
 				})
 			}
@@ -53,8 +53,6 @@ app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 	console.log($scope.today);
 
 	//Here we need to set up the scorecard with variables for use.
-
-
 	$scope.sum = function(scores){
 		var total=0;
 		angular.forEach(scores, function(score){
@@ -62,8 +60,6 @@ app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 		});
 		return total;
 	}
-
-
-
-
+	$scope.courseName = $route.current.params.name;
+	console.log($scope.courseName);
 }]);

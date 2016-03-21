@@ -21,7 +21,7 @@ app.config(function ($routeProvider,$locationProvider,uiGmapGoogleMapApiProvider
         templateUrl: 'views/userdashboard.html',
         controller: 'DashboardCtrl'
       })
-	.when('/scorecard/:courseId', {
+	.when('/scorecard/:name', {
 		    templateUrl: 'views/scorecard.html',
 		    controller: 'ScorecardCtrl'
 		  })

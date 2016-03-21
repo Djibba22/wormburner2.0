@@ -278,6 +278,17 @@ li.favoritesList {
 /*###########################  Styles  #####################################  */
 .scorecard_container {
   color: #948d33; }
+  .scorecard_container .header {
+    border: 4px solid #948d33;
+    background-color: white;
+    margin-bottom: 5px; }
+    .scorecard_container .header h2 {
+      color: #948d33; }
+  .scorecard_container .cname {
+    color: black;
+    font-family: 'nexa_rust_script_l0regular'; }
+  .scorecard_container .cdate {
+    color: black; }
 
 .card {
   background-color: #948d33;
@@ -289,6 +300,9 @@ li.favoritesList {
 
 thead, th {
   background-color: #1C1C1C; }
+
+.table-responsive {
+  border: none !important; }
 
 /*######################  Customize #####################################  */
 /*###########################  Styles  #####################################  */
@@ -309,7 +323,7 @@ thead, th {
     border-bottom: 0; } }
 @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
   /* Force table to not be like tables anymore */
-  table, thead, tbody, th, td, tr {
+  table, thead, tbody, th, td {
     display: block; }
 
   /* Hide table headers (but not display: none;, for accessibility) */
