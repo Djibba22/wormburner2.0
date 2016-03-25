@@ -24,20 +24,48 @@ footer{
 	color:#777;
 }
 .container{
-	padding: 20px;
+	padding: 0px 20px 10px 20px;
 	background-image:url("../img/hixs_pattern_evolution.png");
 }
-
+.home-logo{
+	height: 300px;
+	 position: relative;
+	 background: url("../img/course_pic.jpg");
+	 background-position: -450px -410px;
+	 background-repeat: no-repeat;
+	 margin-bottom: 50px;
+ }
+ #color-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: black;
+   opacity: 0.6;
+}
 /*######################  Blog Grid #####################################  */
 /*###########################  Styles  #####################################  */
 .portfolio-item .text{
 	padding:2%;
 }
-.portfolio-item a{
-	color:$olivedrab;
+.portfolio-item i{
+
+
 }
 .portfolio-item p{
 	color:gray;
+}
+.glyphicon{
+	height: 200px;
+	margin:auto;
+}
+.img-responsive.bottom{
+	height: 150px;
+	width: 150px;
+	margin-top: 50px;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 /*######################  Weather Widget #####################################  */
@@ -101,6 +129,7 @@ div.inline {
 .getGolf_button{
 	width:60%;
 	margin: 0 auto 50px auto;
+	position:relative;
 }
 .greeny{
 	background-color: #726d27;
@@ -177,13 +206,15 @@ div.inline {
 	color: gray;
 }
 .container.header{
-
+	padding-top: 10px;
+	z-index: 2;
+	background: #1C1C1C;
 }
 .header{
 	color: white;
 }
 .indnav{
-	font-size: 15px;
+	font-size: 20px;
 	color: #7A9E35;
 }
 a.indnav:hover{
@@ -203,12 +234,12 @@ a.indnav.reg{
 .menulogo:hover{
 	-webkit-transform: scale(1.2);
 }
-.home-logo{
-}
+
 .WBlogo-index{
 	height: 200px;
 	width: 330px;
 	margin: 25px auto;
+	position:relative;
 }
 .local{
 	height: 20px;
@@ -218,8 +249,10 @@ a.indnav.reg{
 	margin-top: 50px;
 }
 .lead{
-	font-family: 'nexa_rust_script_l0regular';
+	font-family: "trade-gothic",helvetica,arial,sans-serif;
 	color: white;
+	position:relative;
+	margin-top: 0;
 
 }
 /*######################  WebFont #####################################  */
@@ -234,9 +267,7 @@ h1.extras{
 	margin-top: 0px;
 	color: #7A9E35;
 }
-.lead{
-	font-family: 'nexa_rust_script_l0regular';
-}
+
 /*######################  NavBar #####################################  */
 /*###########################  Styles  #####################################  */
 .brand{
@@ -309,7 +340,16 @@ img.user{
 .favoritesList{
 	color: $olivedrab;
   font-family: 'nexa_rust_script_l0regular';
-
+}
+.score_box{
+	border: 1px solid white;
+	margin-right: 3%;
+	background-color: #1C1C1C;
+}
+.score_box_inner{
+	border: 1px solid white;
+	margin: 3%;
+	background-color: white;
 }
 
 /*######################  Score Card #####################################  */

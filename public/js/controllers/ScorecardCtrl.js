@@ -30,7 +30,8 @@ app.controller('ScorecardCtrl', ['$scope' , '$http','$firebaseArray', '$firebase
 				$scope.games.$add({
 					date:$scope.today,
 					courseName: $scope.courseName,
-					cards: $scope.cards
+					cards: $scope.cards,
+					score: $scope.sum
 				})
 			}
 

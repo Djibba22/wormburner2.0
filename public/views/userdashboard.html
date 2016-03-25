@@ -29,7 +29,13 @@
 			<div class="" ng-controller="ScorecardCtrl">
 				<div data-ng-repeat="game in games">
 					<div class="row text-center">
-						<p class="favoritesList">{{game.courseName}}</p>
+						<div class="score_box">
+							 <h3 class="">{{game.date}}</h3>
+							<div class="score_box_inner">
+							 <h3 class="">{{game.courseName}}</h3>
+							</div>
+						</div>
+						{{game.cards.total}}</h3>
 					</div>
 				</div>
 			</div>
