@@ -4,7 +4,7 @@
             navigator.geolocation.getCurrentPosition(function(position) {
                 var key = '97292890b778c782'; //Please see http://www.wunderground.com/
                 $rootScope.jsonpCount++
-                var service_url = "http://api.wunderground.com/api/" + key + "/forecast/geolookup/conditions/q/" + position.coords.latitude + "," + position.coords
+                var service_url = "https://api.wunderground.com/api/" + key + "/forecast/geolookup/conditions/q/" + position.coords.latitude + "," + position.coords
                     .longitude + ".json?callback=angular.callbacks._"+$rootScope.jsonpCount;
                 $http.jsonp(service_url).success(function(data) {
                     $scope.city = data.location.city;
